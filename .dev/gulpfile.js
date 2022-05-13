@@ -1,5 +1,6 @@
 const IS_PROD = process.env.NODE_ENV === 'production';
 const { serverUrl, gitUrl } = require('./config');
+const gitDeployBuild = require('./gitDeploy');
 
 const destPath = IS_PROD ? '../.build/' : '../assets/'
 
@@ -83,3 +84,4 @@ function buildFiles() {
 
 exports.dev = series(clean, parallel(styles, scripts), serve)
 exports.build = series(clean, parallel(styles, scripts, buildFiles))
+exports.deploy = gitDeployBuild
