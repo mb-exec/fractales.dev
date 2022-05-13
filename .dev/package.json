@@ -1,5 +1,8 @@
 {
   "name": "fractales",
+  "repository": {
+    "url": "https://github.com/mb-exec/fractales.dev.git"
+  },
   "scripts": {
     "start": "NODE_ENV='development' gulp dev",
     "build": "NODE_ENV='production' gulp build",
