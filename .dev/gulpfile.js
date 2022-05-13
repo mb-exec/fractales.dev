@@ -1,5 +1,5 @@
 const IS_PROD = process.env.NODE_ENV === 'production';
-const SERVER_URL = require('./config');
+const { serverUrl, gitUrl } = require('./config');
 
 const destPath = IS_PROD ? '../.build/' : '../assets/'
 
@@ -58,7 +58,7 @@ function images() {
 
 function serve() {  
   browserSync.init({
-    proxy: SERVER_URL,
+    proxy: serverUrl,
     notify: false
   })
 
