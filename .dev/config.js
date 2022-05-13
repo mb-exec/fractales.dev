@@ -5,3 +5,5 @@ const path = require('path');
 const ROOT_FOLDER_NAME = path.resolve(__dirname, '../').split('/').pop()
 
 const SERVER_URL = SERVER_BASE_URL + '/' + ROOT_FOLDER_NAME
+
+module.exports = SERVER_URL
