@@ -1,0 +1,24 @@
+{
+  "name": "fractales",
+  
+  "scripts": {
+    "start": "",
+    "build": "",
+    "deploy": ""
+  },
+
+  "dependencies": {
+    "browser-sync": "^2.27.9",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-csso": "^4.0.1",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-sass": "^5.1.0",
+    "gulp-ttf-to-woff": "^1.0.3",
+    "gulp-uglify-es": "^3.0.0",
+    "gulp-webp": "^4.0.1",
+    "sass": "^1.51.0",
+    "stream-combiner2": "^1.1.1"
+  },
+  "devDependencies": {}
+}
