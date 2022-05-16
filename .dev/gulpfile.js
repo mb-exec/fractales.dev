@@ -75,13 +75,14 @@ function serve() {
 }
 
 function clean() {
-  return del(destPath, {force: true})
+  const path = destPath + '*/'
+  return del(path, {force: true})
 }
 
-function buildFiles() {
+function php() {
   return src(['../**/*.php', '../.htaccess']).pipe(dest('../.build'))
 }
 
 exports.dev = series(clean, parallel(styles, scripts), serve)
-exports.build = series(clean, parallel(styles, scripts, buildFiles))
+exports.build = series(clean, parallel(styles, scripts, php))
 exports.deploy = gitDeployBuild
