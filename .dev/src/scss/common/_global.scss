@@ -1,0 +1,255 @@
+@import './assets/variables';
+
+.container {
+  max-width: 420px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.text-ls {
+  letter-spacing: 0.01em;
+}
+
+.title {
+  &-lg {
+    font: 600 28px/1.5 $--font-panchang;   
+  }
+}
+
+.sect {
+  scroll-margin-top: 20px;
+  margin: 90px 0;
+
+  &__title {
+    font: 600 22px $--font-panchang;
+    margin-bottom: 30px;
+  }
+
+  &--columns {
+    &__inner {
+      &-title {          
+        color: $--color-primary;
+        font-weight: 400;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+.small-arrow {
+  display: inline-block;
+  width: 30px;
+  height: 10px;
+  margin-left: 15px;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+  }
+
+  &::before {
+    width: 100%;
+    top: 50%;
+    left: 0;
+    height: 1px;
+    transform: translateY(-50%);
+    background-color: currentColor;
+  }
+
+  &::after {
+    width: 5px;
+    height: 5px;
+    border-top: 1px solid currentColor;
+    border-right: 1px solid currentColor;
+    top: 50%;
+    right: 2px;
+    transform: rotate(45deg) translateY(-70%);
+  }
+}
+
+@media screen and (min-width: 767.98px) {
+  .container {
+    max-width: 760px;
+  }
+
+  .title {
+    &-lg {
+      font-size: 75px;
+    }
+  }
+
+  .sect {
+    margin: 110px 0;
+
+    &__title {
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    &--columns {
+      &__inner {
+        display: flex;
+
+        &-title {
+          margin-bottom: 0;
+          margin-right: 20px;
+        }
+
+        &-content {
+          max-width: 540px;
+          width: 100%;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1023.98px) {
+  .container {
+    max-width: 1000px;
+  }
+
+  .title {
+    &-lg {
+      font-size: 100px; 
+    }
+  }
+  
+  .sect {
+    margin: 130px 0;
+
+    &--columns {
+      &__inner {
+        &-content {
+          max-width: 735px;
+        }
+      }
+    }
+  }
+  
+  /*
+    структура элемента 
+
+    <div class="frame-hover">
+      <span class="frame-hover__top"></span>
+      <span class="frame-hover__bottom"></span>
+    </div>
+  */
+  .frame-hover {
+    position: relative;
+
+    &:hover {
+      .frame-hover__top,
+      .frame-hover__bottom {
+        opacity: 1;
+      }
+    }
+
+    &__top,
+    &__bottom {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity $--transition-speed;
+      z-index: 1;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        border: 5px solid $--color-primary;
+      }
+    }
+
+    &__top {
+      &::before,
+      &::after {
+        top: 0;
+        border-bottom: none;
+      }
+    }
+
+    &__bottom {
+      &::before,
+      &::after {
+        bottom: 0;
+        border-top: none;
+      }
+    }
+
+    &__top {
+      &::before {
+        left: 0;
+        border-right: none;
+      }
+
+      &::after {
+        right: 0;
+        border-left: none;
+      }
+    }
+
+    &__bottom {
+      &::before {
+        left: 0;
+        border-right: none;
+      }
+
+      &::after {
+        right: 0;
+        border-left: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1279.98px) {
+  .container {
+    max-width: 1240px;
+  }  
+
+  .title {
+    &-lg {
+      font-size: 120px;
+    }
+  }
+
+  .sect {
+    margin: 160px 0;
+
+    &__title {
+      font-size: 48px;
+      margin-bottom: 50px;
+    }
+
+    &--columns {
+      &__inner {
+        &-content {
+          max-width: 895px;
+        }
+      }
+    }
+  }
+
+  .frame-hover {
+    &--big {
+      .frame-hover__top,
+      .frame-hover__bottom {
+        &::before,
+        &::after {
+          width: 30px;
+          height: 30px;
+          border-width: 7px;
+        }
+      }
+    }
+  }
+}
