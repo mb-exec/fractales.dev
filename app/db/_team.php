@@ -1,5 +1,5 @@
 <?php
-$team_photo_dir = '/assets/img/team/';
+$team_photo_dir = $site_url . '/assets/img/team/';
 
 $team = [
   [

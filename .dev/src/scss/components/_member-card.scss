@@ -1,0 +1,30 @@
+@import '../assets/variables';
+
+.member {
+  letter-spacing: 0.01em;
+  
+  &__pic {
+    display: block;
+    position: relative;
+    padding-bottom: 125%;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__name {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 15px 0 5px;
+  }
+
+  &__position {
+    color: rgba($--color-black, .7);
+  }
+}
