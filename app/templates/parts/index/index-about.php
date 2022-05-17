@@ -75,21 +75,8 @@ $team = $db['team'];
           <div class="about__team-drag">DRAG</div>
           
           <div class="swiper-wrapper">
-            <?php foreach ( $team as $member) : 
-              $foto_jpg = $site_url . $member['photo'] . '.jpg';
-              $foto_webp = $site_url . $member['photo'] . '.webp';
-              $name = $member['name'];
-              $position = $member['position'];
-            ?>
-              <div class="member swiper-slide">
-                <picture class="member__pic">
-                  <source srcset="<?php echo $foto_webp ?>" type="image/webp">
-                  <img src="<?php echo $foto_jpg ?>" alt="<?php echo $name ?> photo" class="member__img">
-                </picture>
-
-                <h4 class="member__name"><?php echo $name ?></h4>
-                <p class="member__position"><?php echo $position ?></p>
-              </div>
+            <?php foreach ( $team as $member) : ?>
+              <?php echo get_member_card( $member, 'swiper-slide', true, 'div') ?>
             <?php endforeach ?>
           </div>
         </div>
