@@ -1,6 +1,7 @@
 <?php
 require 'inc/index.php';
 require 'db/index.php';
+require 'components/index.php';
 
 $site_url = get_site_url();
 
