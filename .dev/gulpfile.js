@@ -2,7 +2,7 @@ const IS_PROD = process.env.NODE_ENV === 'production';
 const { serverUrl, gitUrl } = require('./config');
 const gitDeployBuild = require('./gitDeploy');
 
-const destPath = IS_PROD ? '../.build/' : '../assets/'
+const destPath = IS_PROD ? '../.build/assets/' : '../assets/'
 
 const { src, dest, watch, series, parallel } = require('gulp');
 
@@ -75,14 +75,14 @@ function serve() {
 }
 
 function clean() {
-  const path = destPath + '*/'
-  return del(path, {force: true})
+  const path = IS_PROD ? '../.build/' : '../assets/'
+  return del(path + '*/', {force: true})
 }
 
 function php() {
   return src(['../**/*.php', '../.htaccess']).pipe(dest('../.build'))
 }
 
-exports.dev = series(clean, parallel(styles, scripts), serve)
-exports.build = series(clean, parallel(styles, scripts, php))
+exports.dev = series(clean, parallel(styles, scripts, images, fonts), serve)
+exports.build = series(clean, parallel(styles, scripts, images, fonts, php))
 exports.deploy = gitDeployBuild
