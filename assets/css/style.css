@@ -398,6 +398,65 @@ textarea {
     color: #6D37FF;
   }
 }
+[animation] {
+  opacity: 0;
+}
+[animation][animation-active] {
+  opacity: 1;
+}
+[animation][animation=appear-left][animation-active] {
+  animation: appear-left 0.7s linear;
+}
+[animation][animation=appear-right][animation-active] {
+  animation: appear-right 0.7s linear;
+}
+[animation][animation=appear-top][animation-active] {
+  animation: appear-top 0.7s linear;
+}
+[animation][animation=appear-bottom][animation-active] {
+  animation: appear-bottom 0.7s linear;
+}
+
+@keyframes appear-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes appear-right {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes appear-top {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes appear-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .contacts__sect {
   padding: 30px 0;
   border-top: 1px solid #CECCE5;
