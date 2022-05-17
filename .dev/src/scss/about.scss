@@ -1,0 +1,229 @@
+@import './assets/variables';
+@import './components/member-card';
+
+.about-hero {
+  padding-top: 40px;
+
+  &__descr {
+    margin: 10px 0 25px;
+  }
+
+  &__pic {
+    display: block;
+    // padding: 10px;
+    // border-width: 5px;
+    // border-style: solid;
+    // border-image: url('../img/border.svg');      
+    // border-image-slice: 5;
+    // border-image-repeat: round;    
+  }
+}
+
+.about-us {
+  &__descr {
+    font-size: 20px;
+  }
+
+  &__list {
+    margin-top: 40px;
+  }
+
+  &__item {
+    text-align: center;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-title {
+      font: 600 60px/1.5 $--font-panchang;
+    }
+
+    &-descr {
+      font-size: 18px;
+    }
+  }
+}
+
+.about-values {
+  &__item {
+    margin-top: 40px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &-title {
+      font-size: 22px;
+      margin-bottom: 15px;
+      line-height: 1.3;
+    }
+  }
+}
+
+.about-team {
+  &__member {
+    margin-top: 40px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 767.98px) {
+  .about-hero {
+    padding-top: 30px;
+
+    &__descr {
+      max-width: 310px;
+      margin: 0 0 30px auto;
+    }
+  }
+
+  .about-us {
+    &__list {
+      display: flex;
+    }
+
+    &__item {
+      max-width: 230px;
+      width: 100%;
+      margin-right: auto;
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .about-values {
+    &__list {
+      width: 100%;
+      display: flex;
+      flex-flow: wrap;
+    }
+
+    &__item {
+      width: calc(50% - 17.5px);
+      margin-right: 35px;
+
+      &:nth-child(even) {
+        margin-right: 0;
+      }
+
+      &:nth-child(2) {
+        margin-top: 0;
+      }
+
+      &-title {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .about-team {
+    &__list {
+      display: flex;
+      flex-flow: wrap;
+    }
+
+    &__member {
+      width: calc(50% - 7.5px);
+
+      &:nth-child(2) {
+        margin-top: 0;
+      }
+
+      &:nth-child(odd) {
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1023.98px) {
+  .about-hero {    
+    padding-top: 40px;
+
+    &__descr {
+      max-width: 350px;
+      margin: 10px 38px 40px auto;
+    }
+  }
+
+  .about-us {
+    &__descr {
+      font-size: 26px;
+    }
+
+    &__list {
+      margin-top: 50px;
+    }
+
+    &__item {
+      max-width: 270px;
+
+      &-title {
+        font-size: 75px;
+      }
+
+      &-descr {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .about-values {
+    &__item {
+      width: calc(50% - 20px);
+      margin-right: 40px;
+
+      &-title {
+        font-size: 32px;
+      }
+    }
+  }
+
+  .about-team {
+    &__member {
+      width: calc((100% - 40px) / 3);
+      margin: 0 20px 0 0;
+
+      &:nth-child(odd) {
+        margin-right: 20px;
+      }
+
+      &:nth-child(n+4) {
+        margin-top: 40px;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1279.98px) {
+  .about-hero {
+    padding-top: 80px;
+
+    &__descr {
+      margin-top: 20px;
+    }
+  }
+
+  .about-values {
+    &__item {
+      width: calc(50% - 30px);
+      margin-right: 60px;
+
+      &-title {
+        font-size: 36px;
+        margin-bottom: 25px;
+      }
+    }
+  }
+}
