@@ -1,3 +1,4 @@
+<?php require './app/templates/parts/contacts.php' ?>
 </main>
   
   <footer class="ftr text-ls">
