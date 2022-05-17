@@ -25,7 +25,6 @@ var isInViewport = function(el) {
 };
 
 window.addEventListener('load', function() {
-  console.log('asd');
   (function () {
     const hdr = document.querySelector('.hdr');
     const hdrHeight = parseInt(window.getComputedStyle(hdr).height);

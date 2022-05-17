@@ -25,7 +25,6 @@ var isInViewport = function(el) {
 };
 
 window.addEventListener('load', function() {
-  console.log('asd');
   //=require /modules/_header.js
   //=require /modules/_animations.js
 });
