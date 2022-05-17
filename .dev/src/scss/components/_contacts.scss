@@ -1,0 +1,222 @@
+.contacts {
+  &__sect {
+    padding: 30px 0;
+    border-top: 1px solid $--color-light;
+
+    &-title {
+      margin-bottom: 15px;
+      font-size: inherit;
+    }
+  }
+
+  &__link {
+    color: $--color-primary;
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  .socials {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    font-size: 20px;
+
+    &__item {
+      margin-bottom: 5px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .contact-form {
+    input,
+    textarea {
+      &::placeholder {
+        color: #7C7C7C;
+        font: 400 16px/1.5 $--font-primary;
+      }
+    }
+    
+    .field {
+      width: 100%;
+      padding: 14px 10px;
+      background-color: $--color-white;
+      border: 1px solid $--color-light;
+
+      &:not(.field--msg) {
+        margin-bottom: 30px;
+      }
+
+      &--msg {
+        resize: none;
+        height: 150px;
+      }
+    }
+
+    .file {
+      display: block;
+      position: relative;
+      margin: 15px 0 0 auto;
+
+      &__input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        opacity: 0;
+      }
+
+      &__field {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        &::before {
+          content: '';
+          display: inline-block;
+          width: 20px;
+          height: 22px;
+          margin-right: 10px;
+          background: url('../img/icons/paper-clip.svg') no-repeat center/contain;
+        }
+      }
+    }
+
+    &__bottom {
+      margin-top: 30px;
+    }
+
+    &__warning {
+      margin-bottom: 20px;
+    }
+
+    &__send {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 767.98px) {
+  .contacts {
+    &__sect {
+      display: flex;
+
+      &-content {
+        max-width: 550px;
+        width: 100%;
+        margin-left: auto;
+      }
+    }
+
+    .contact-form {
+      display: flex;
+      flex-flow: wrap;
+      position: relative;
+  
+      &::after,
+      &::before {
+        content: '';
+        position: absolute;
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        filter: blur(55px);
+        opacity: .8;
+        z-index: -1;
+      }
+  
+      &::before {
+        background-color: $--color-secondary;
+        left: -120px;
+        top: 20%;
+      }
+  
+      &::after {
+        background-color: $--color-primary;
+        left: -100px;
+        top: 35%;
+      }
+
+      .field {
+        &:not(.field--msg) {
+          width: calc(50% - 10px);
+        }
+
+        &--fname,
+        &--email {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1023.98px) {
+  .contacts {
+    &__sect {
+      padding: 40px 0;
+      
+      &-content {
+        max-width: 735px;
+      }
+    }
+
+    .contact-form {
+      &::before,
+      &::after {
+        width: 270px;
+        height: 270px;
+        left: -200px;
+        filter: blur(75px);
+        opacity: .7;
+      }
+
+      &::before {
+        top: 10%;
+      }
+
+      &::after {
+        top: 45%;
+      }
+
+      input,
+      textarea {
+        &::placeholder {
+          font-size: 18px;
+        }
+      }
+
+      .field {
+        padding: 14px 20px;
+      }
+
+      &__warning {
+        max-width: 395px;
+        margin-bottom: 0;
+      }
+
+      &__send {
+        max-width: 195px;
+        margin-left: auto;
+      }
+
+      &__bottom {
+        width: 100%;
+        display: flex;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1279.98px) {
+  .contacts {
+    &__sect {
+      &-content {
+        max-width: 895px;
+      }
+    }
+  }  
+}
