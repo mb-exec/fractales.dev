@@ -1,7 +1,9 @@
 <?php
-require 'inc/index.php';
-require 'db/index.php';
-require 'components/index.php';
+define('__ROOT__', dirname(__DIR__, 1));
+
+require __ROOT__ . '/app/inc/index.php';
+require __ROOT__ . '/app/db/index.php';
+require __ROOT__ . '/app/components/index.php';
 
 $site_url = get_site_url();
 

@@ -1,4 +1,4 @@
-<?php require './app/templates/parts/contacts.php' ?>
+<?php require __ROOT__ . '/app/templates/parts/contacts.php' ?>
 </main>
   
   <footer class="ftr text-ls">
