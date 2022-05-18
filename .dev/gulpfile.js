@@ -67,7 +67,7 @@ function serve() {
   watcher(['./src/js/**/*.js'], scripts)
   watcher(['./src/img/**/*.{svg,png,jpg,jpeg,webp}'], images)
   watcher(['./src/fonts/*.*'], fonts)
-  watcher(['../*.php', '../app/**/*.php'])
+  watcher(['../**/*.php'])
 
   function watcher(globs, cb = null) {
     watch(globs, cb).on('change', browserSync.reload)
