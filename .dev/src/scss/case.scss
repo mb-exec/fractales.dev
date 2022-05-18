@@ -1,0 +1,158 @@
+@import './assets/variables';
+@import './components/case-card';
+
+.case {
+  padding-top: 30px;
+
+  &-hdr {
+    &__title {
+      font: 600 26px/1.5 $--font-panchang;
+      margin: 20px 0 30px;
+    }
+
+    &__pic {
+      margin-top: 0 !important;
+    }
+  }
+
+  &__sect-title {
+    font-size: 18px;
+  }
+
+  &__text-content {
+    strong {
+      display: block;
+      font-size: 20px;
+      font-weight: 400;
+      margin-bottom: 15px;
+    }
+  }
+
+  .pic {
+    display: block;
+    max-width: 720px;
+    margin: 40px auto 0;
+  }
+
+  .info {
+    margin-top: 0;
+
+    &__title {
+      font: 500 12px/1.5 $--font-panchang;
+      margin-bottom: 30px;
+    }
+
+    &__lists {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid $--color-light;
+    }
+
+    .tools {
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &__title {
+        font: 500 14px/1.5 $--font-panchang;
+        margin-bottom: 10px;
+      }
+
+      &__list {
+        &-item {
+          margin-bottom: 5px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 767.98px) {
+  .case {
+    .sect--columns__inner-content {
+      max-width: 535px;
+    }
+
+    &-hdr {
+      &__title {
+        font-size: 36px;
+        margin-top: 30px;  
+      }
+    }
+
+    .info {
+      &__title {
+        font-size: 16px;
+      }
+
+      &__lists {
+        display: flex;
+      }
+
+      .tools {
+        width: 50%;
+      }
+    }
+
+    .pic {
+      margin-top: 50px;
+    }
+  }
+}
+
+@media screen and (min-width: 1023.98px) {
+  .case {
+    padding-top: 40px;
+
+    .sect--columns__inner-content {
+      max-width: 680px;
+    }
+
+    &__sect-title {
+      font-size: 20px;
+    }
+
+    &-hdr {
+      &__title {
+        font-size: 48px;
+        margin: 40px 0;
+      }
+    }
+
+    .pic {
+      margin-top: 70px;
+      max-width: 960px;
+    }
+  }
+}
+
+@media screen and (min-width: 1279.98px) {
+  .case {
+    padding-top: 50px;
+
+    .sect--columns__inner-content {
+      max-width: 715px;
+    }
+
+    &__sect-title {
+      font-size: 24px;
+    }
+
+    &-hdr {
+      &__title {
+        font-size: 60px;
+        margin-top: 50px;
+      }
+    }
+
+    .pic {
+      max-width: 1200px;
+    }
+  }
+}
