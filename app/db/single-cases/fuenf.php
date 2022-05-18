@@ -66,7 +66,7 @@
     ],
 
     'templates' => [
-      'fuenf-results.php',
+      'fuenf/fuenf-results.php',
     ]
   ];
 ?>
