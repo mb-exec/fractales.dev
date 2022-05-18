@@ -1,4 +1,4 @@
-<?php require './app/functions.php' ?>
+<?php require dirname(__DIR__, 2) . '/app/functions.php' ?>
 
 <!DOCTYPE html>
 <html lang="en">
