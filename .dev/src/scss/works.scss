@@ -1,0 +1,26 @@
+@import './components/case-card';
+
+.works {
+  padding-top: 40px;
+
+  &__title {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 767.98px) {
+  .works {
+    padding-top: 30px;
+  }
+}
+@media screen and (min-width: 1023.98px) {
+}
+@media screen and (min-width: 1279.98px) {
+  .works {
+    padding-top: 80px;
+
+    &__title {
+      margin-bottom: 50px;
+    }
+  }
+}
