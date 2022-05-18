@@ -40,7 +40,7 @@ function get_picture_tag($args) {
       <source media="(min-width: 767.98px)" srcset="$src-sm.jpg" type="image/jpeg">
 
       <source media="(max-width: 767.98px)" srcset="$src-xs.webp" type="image/webp">
-      <img src="$src-xs.jpg" alt="$alt" decoding="$decoding">
+      <img loading="lazy" src="$src-xs.jpg" alt="$alt" decoding="$decoding">
     </picture>
   EOL;
 

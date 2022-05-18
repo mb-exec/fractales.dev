@@ -42,7 +42,7 @@ $team = $db['team'];
             ?>
 
               <div class="step swiper-slide">
-                <img src="<?php echo $icon ?>" alt="<?php echo $title ?>" class="step__icon">
+                <img loading="lazy" src="<?php echo $icon ?>" alt="<?php echo $title ?>" class="step__icon">
                 <h4 class="step__title"><?php echo $title ?></h4>
                 <p class="step__descr"><?php echo $descr ?></p>
               </div>

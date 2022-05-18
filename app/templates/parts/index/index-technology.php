@@ -62,7 +62,7 @@
                       $icon_link = $site_url . '/assets/img/tech-icons/' . $name . '.svg'
                       ?>
                       <li class="stack__item">
-                        <img src="<?php echo $icon_link ?>" alt="<?php echo $name ?> icon" class="stack__item-icon">
+                        <img loading="lazy" src="<?php echo $icon_link ?>" alt="<?php echo $name ?> icon" class="stack__item-icon">
                         <?php echo $name ?>
                       </li>
                     <?php endforeach ?>

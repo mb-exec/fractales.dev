@@ -59,7 +59,7 @@
   <div class="container">
     <div class="hdr__inner">
       <a href="<?php echo $site_url ?>" class="hdr__logo">
-        <img src="<?php echo $site_url ?>/assets/img/logo.svg" alt="Лого" class="hdr__logo-img">
+        <img loading="lazy" src="<?php echo $site_url ?>/assets/img/logo.svg" alt="Лого" class="hdr__logo-img">
       </a>
 
       <button class="burger" title="toggle menu"></button>

@@ -9,7 +9,7 @@
       <source media="(min-width: 767.98px)" srcset="<?php echo $site_url ?>/assets/img/about-page/hero-lg.jpg" type="image/jpeg">
 
       <source media="(max-width: 767.98px)" srcset="<?php echo $site_url ?>/assets/img/about-page/hero-xs.webp" type="image/webp">
-      <img src="<?php echo $site_url ?>/assets/img/about-page/hero-xs.jpg" alt="#" class="about-hero__img">
+      <img loading="lazy" src="<?php echo $site_url ?>/assets/img/about-page/hero-xs.jpg" alt="#" class="about-hero__img">
     </picture>
   </div>
 </section>

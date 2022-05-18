@@ -24,7 +24,7 @@ function get_member_card($member, $class = '', $animation = false, $tag = 'li') 
     <$tag class="member$class"$animation_attr>
       <picture class="member__pic">
         <source srcset="$photo.webp" type="image/webp">
-        <img src="$photo.jpg" alt="$name photo" class="member__img">
+        <img loading="lazy" src="$photo.jpg" alt="$name photo" class="member__img">
       </picture>
 
       <h4 class="member__name">$name</h4>
