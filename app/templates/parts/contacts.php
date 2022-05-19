@@ -37,7 +37,7 @@
         <h3 class="contacts__sect-title">CONTACT US</h3>
 
         <div class="contacts__sect-content">
-          <form action="" class="contact-form text-ls">
+          <form id="contact-form" action="" class="contact-form text-ls">
             <input type="text" name="first_name" placeholder="First name" class="field field--fname">
             <input type="text" name="last_name" placeholder="Last name" class="field field--lname">
             <input type="text" name="email" placeholder="Email*" required class="field field--email">
@@ -45,10 +45,16 @@
 
             <textarea name="msg" placeholder="Tell about your task" class="field field--msg"></textarea>
 
-            <label class="file">
-              <input type="file" name="file" class="file__input">
-              <span class="file__field">Attach file</span>
-            </label>
+            <div class="attachments">
+              <span class="attachments__preview">
+                <span class="attachments__name"></span>
+                <button class="attachments__remove" title="remove file"></button>
+              </span>
+              <label class="file">
+                <input type="file" name="file" class="file__input">
+                <span class="file__field">Attach file</span>
+              </label>
+            </div>
 
             <div class="contact-form__bottom">
               <p class="contact-form__warning">By clicking the "send" button you consent to the processing of personal data</p>
