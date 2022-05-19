@@ -83,6 +83,10 @@ function php() {
   return src(['../**/*.php', '../.htaccess']).pipe(dest('../.build'))
 }
 
+function fav() {
+  return src('../fav/**/*').pipe(dest('../.build/fav'))
+}
+
 exports.dev = series(clean, parallel(styles, scripts, images, fonts), serve)
-exports.build = series(clean, parallel(styles, scripts, images, fonts, php))
+exports.build = series(clean, parallel(styles, scripts, images, fonts, php, fav))
 exports.deploy = gitDeployBuild
