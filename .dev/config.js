@@ -1,7 +1,7 @@
 const GITHUB_URL = 'https://github.com/mb-exec/fractales.dev.git'
 const GITHUB_SSH = 'git@github.com:mb-exec/fractales.dev.git'
 
-// const SERVER_URL = 'http://'
+// const SERVER_BASE_URL = 'http://'
 const SERVER_BASE_URL = 'http://localhost:8888'
 
 const path = require('path');
