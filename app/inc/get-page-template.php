@@ -5,6 +5,7 @@
 function get_page_template() 
 {
   $script = $_SERVER['SCRIPT_NAME'];
-  $script = array_pop( explode( '/', $script ) );
-  return preg_replace('/\W|php/', '', $script);
+  $split_path = explode( '/', $script );
+  $script_name = array_pop( $split_path );
+  return preg_replace('/\W|php/', '', $script_name);
 }
