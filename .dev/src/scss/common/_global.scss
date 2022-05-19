@@ -91,6 +91,7 @@
     &--columns {
       &__inner {
         display: flex;
+        align-items: flex-start;
 
         &-title {
           margin-bottom: 0;
