@@ -20,6 +20,7 @@ function deployBuild(cb) {
         .commit('upd production build')
         .push(['-u', 'origin', 'prod', '--force'])
     })
+    .catch(e => console.log(e))
     .finally(() => cb()) 
 }
 
