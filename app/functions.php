@@ -12,7 +12,7 @@ $page = $db['pages'][$curr_page_name];
 
 $tel = $db['contacts']['tel'];
 $tel_link = str_replace(' ', '', $tel);
-$address = $db['contacts']['address'];
+$addresses = $db['contacts']['addresses'];
 $email = $db['contacts']['email'];
 $socials = $db['contacts']['socials'];
 ?>
