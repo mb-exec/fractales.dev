@@ -4,7 +4,7 @@ const gitDeployBuild = require('./gitDeploy');
 
 const destPath = IS_PROD ? '../.build/assets/' : '../assets/'
 
-const { src, dest, watch, series, parallel } = require('gulp');
+const { src, dest, watch, series, parallel, lastRun } = require('gulp');
 
 const del = require('del');
 const browserSync = require('browser-sync').create();
@@ -51,7 +51,7 @@ function fonts() {
 }
 
 function images() {
-  return src('./src/img/**/*.{svg,png,jpg,jpeg,webp}')
+  return src('./src/img/**/*.{svg,png,jpg,jpeg,webp}', {since: lastRun(images)})
     .pipe(dest(destPath + 'img'))
     .pipe(webp())
     .pipe(dest(destPath + 'img'))
