@@ -71,5 +71,14 @@
         'case' =>  '1.0.0',
       ],
     ],
+
+    'orange' => [
+      'title' => 'Fractales - orange case description',
+      'description' => '',
+      'scripts' => [],
+      'styles' => [
+        'case' =>  '1.0.0',
+      ],
+    ],
   ]
 ?>
