@@ -27,10 +27,10 @@
     'about' => '',
 
     // секция design
-    'design' => [
-      'strong' => '',
-      'text' => ""
-    ],
+    // 'design' => [
+    //   'strong' => '',
+    //   'text' => ""
+    // ],
 
     // изображения для секций
     'imgs' => [
@@ -42,6 +42,53 @@
         'name' => 'about',
         'alt' => 'Site preview on mobile'
       ]
+      ],
+
+    'sections' => [
+      [
+        'title' => 'MAIN PAGE',
+        'strong' => '',
+        'text' => "",
+
+        'img_name' => 'main-page',
+        'img_alt' => ''
+      ],
+      [
+        'title' => 'WEEKLY HOROSCOPE',
+        'strong' => '',
+        'text' => "",
+
+        'img_name' => 'horoscope',
+        'img_alt' => ''
+      ],
+      [
+        'title' => 'MANIFESTO PAGES',
+        'strong' => '',
+        'text' => "",
+
+        'img_name' => 'manifesto-pages',
+        'img_alt' => ''
+      ],
+      [
+        'title' => 'ARTICLE PAGES',
+        'strong' => '',
+        'text' => "",
+
+        'img_name' => 'article-pages',
+        'img_alt' => ''
+      ],
+      [
+        'title' => 'AUTHORS',
+        'strong' => '',
+        'text' => "",
+
+        'img_name' => 'authors',
+        'img_alt' => ''
+      ]
+    ],
+
+    'templates' => [
+      'fuenf/fuenf-results.php',
     ]
   ]
 ?>
