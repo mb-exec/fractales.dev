@@ -2,7 +2,7 @@
   $fuenf = [
     'title' => 'FUENF X THE BRVTALIST collaboration catalog',
     'tag' => 'Online shopping',
-    'card_descr' => '',
+    'card_descr' => 'With the help of a landing page, a new FUENF collection was presented. We focused on products and conveyed the atmosphere of the brand.',
     'imgs_folder' => $site_url . '/assets/img/cases/fuenf/',
     'card_img_alt' => 'Fuenf case preview',
     'page_link' => $site_url . '/cases/fuenf',
