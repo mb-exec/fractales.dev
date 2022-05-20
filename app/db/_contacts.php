@@ -13,7 +13,7 @@
     'addresses' => [
       [
         'city' => 'Boston, MA, USA',
-        'street' => '361 Newbury Street 5th Floor, 02115',
+        'street' => '361 Newbury Street, 02115',
         'tel' => '+1 773 541 961', 
       ],
       [
@@ -34,7 +34,7 @@
       [
         'city' => 'Nur-Sultan, Kazakhstan',
         'street' => 'Mäskew Street 26/1, Z10X5B0',
-        'tel' => '+420 773 541 961', 
+        'tel' => '+7 701 520 81 24', 
       ],
     ],
   ];
