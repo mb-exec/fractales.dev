@@ -80,5 +80,14 @@
         'case' =>  '1.0.0',
       ],
     ],
+
+    'bits' => [
+      'title' => 'Fractales - bits digital design case description',
+      'description' => '',
+      'scripts' => [],
+      'styles' => [
+        'case' =>  '1.0.0',
+      ],
+    ],
   ]
 ?>

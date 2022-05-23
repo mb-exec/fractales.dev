@@ -43,47 +43,47 @@
 
 <body>
 
-<svg xmlns="http://www.w3.org/2000/svg" class="noise body-noise">
-  <filter id="noise" x="0" y="0">
-    <feTurbulence type="fractalNoise" baseFrequency=".45" numOctaves="3" stitchTiles="stitch"/>
-    <feBlend mode="screen"/>
-  </filter>
-  <rect filter="url(#noise)" class="noise__rect" height="100%" width="100%"/>
-</svg>
-
-<header class="hdr" animation="appear-top">
-  <svg xmlns="http://www.w3.org/2000/svg" class="noise hdr__noise">
+  <svg xmlns="http://www.w3.org/2000/svg" class="noise body-noise">
+    <filter id="noise" x="0" y="0">
+      <feTurbulence type="fractalNoise" baseFrequency=".45" numOctaves="3" stitchTiles="stitch"/>
+      <feBlend mode="screen"/>
+    </filter>
     <rect filter="url(#noise)" class="noise__rect" height="100%" width="100%"/>
   </svg>
 
-  <div class="container">
-    <div class="hdr__inner">
-      <a href="<?php echo $site_url ?>" class="hdr__logo">
-        <img loading="lazy" src="<?php echo $site_url ?>/assets/img/logo.svg" alt="Лого" class="hdr__logo-img">
-      </a>
+  <header class="hdr" animation="appear-top">
+    <svg xmlns="http://www.w3.org/2000/svg" class="noise hdr__noise">
+      <rect filter="url(#noise)" class="noise__rect" height="100%" width="100%"/>
+    </svg>
 
-      <button class="burger" title="toggle menu"></button>
+    <div class="container">
+      <div class="hdr__inner">
+        <a href="<?php echo $site_url ?>" class="hdr__logo">
+          <img loading="lazy" src="<?php echo $site_url ?>/assets/img/logo.svg" alt="Лого" class="hdr__logo-img">
+        </a>
 
-      <div class="hdr__menu">          
-        <svg xmlns="http://www.w3.org/2000/svg" class="noise hdr__menu-noise">
-          <rect filter="url(#noise)" class="noise__rect" height="100%" width="100%"/>
-        </svg>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li class="nav__item"><a href="<?php echo $site_url ?>/#services" class="nav__link">Services</a></li>
-            <li class="nav__item"><a href="<?php echo $site_url ?>/works" class="nav__link">Works</a></li>
-            <li class="nav__item"><a href="<?php echo $site_url ?>/about" class="nav__link">About</a></li>
-            <li class="nav__item"><a href="#contacts" class="nav__link">Contacts</a></li>
-          </ul>
-        </nav>
+        <button class="burger" title="toggle menu"></button>
 
-        <div class="hdr__contacts">
-          <a class="hdr__contacts-link" href="mailto:<?php echo $email ?>"><?php echo $email ?></a>
-          <a class="hdr__contacts-link" href="tel:<?php echo $tel_link ?>"><?php echo $tel ?></a>
+        <div class="hdr__menu">          
+          <svg xmlns="http://www.w3.org/2000/svg" class="noise hdr__menu-noise">
+            <rect filter="url(#noise)" class="noise__rect" height="100%" width="100%"/>
+          </svg>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item"><a href="<?php echo $site_url ?>/#services" class="nav__link">Services</a></li>
+              <li class="nav__item"><a href="<?php echo $site_url ?>/works" class="nav__link">Works</a></li>
+              <li class="nav__item"><a href="<?php echo $site_url ?>/about" class="nav__link">About</a></li>
+              <li class="nav__item"><a href="#contacts" class="nav__link">Contacts</a></li>
+            </ul>
+          </nav>
+
+          <div class="hdr__contacts">
+            <a class="hdr__contacts-link" href="mailto:<?php echo $email ?>"><?php echo $email ?></a>
+            <a class="hdr__contacts-link" href="tel:<?php echo $tel_link ?>"><?php echo $tel ?></a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<main class="main">
+  <main class="main">
