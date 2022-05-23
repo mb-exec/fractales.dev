@@ -69,6 +69,10 @@
   }
 }
 
+.hidden {
+  display: none !important;
+}
+
 @media screen and (min-width: 767.98px) {
   .container {
     max-width: 760px;

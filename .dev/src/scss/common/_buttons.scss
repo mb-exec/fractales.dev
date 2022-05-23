@@ -11,6 +11,13 @@
   justify-content: center;
 }
 
+.btn-hollow {
+  padding: 12px;
+  font-size: 18px;
+  border: 1px solid $--color-primary;
+  transition: background $--transition-speed, color $--transition-speed;
+}
+
 @media screen and (min-width: 1023.98px) {
   .btn {
     font-size: 18px;
@@ -19,6 +26,15 @@
     &:hover {
       background-color: transparent;
       color: $--color-primary;
+    }
+  }
+
+  .btn-hollow {
+    font-size: 20px;
+
+    &:hover {
+      background-color: $--color-primary;
+      color: $--color-white;
     }
   }
 }
