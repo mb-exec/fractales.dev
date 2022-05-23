@@ -2,13 +2,13 @@
   $bits = [
     'title' => 'BITS DIGITAL DESIGN<br>digital markeitng agency',
     'tag' => 'Corporate  website',
-    'card_descr' => '',
+    'card_descr' => 'We create a website for digital markeitng agency with focus on international markets und business development in IT and Digital.',
     'imgs_folder' => $site_url . '/assets/img/cases/bits/',
     'card_img_alt' => '',
     'page_link' => $site_url . '/cases/bits',
 
     // для секции с основной информацией
-    'descr' => '',
+    'descr' => 'We thought over the site structure and visual representation of the company, based on design solutions we created a concise corporate website for an international design agency, taking into account the specifics of the field.',
 
     'services' => [
       'Websites development', 

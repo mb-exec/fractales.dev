@@ -22,13 +22,13 @@
         'tel' => '+44 7943 405419', 
       ],
       [
-        'city' => 'Czech Republic, Herink',
+        'city' => 'Herink, Czech Republic',
         'street' => 'Olivova 85, 251 01',
         'tel' => '+420 773 541 961', 
       ],
       [
-        'city' => 'Georgia, Tbilisi',
-        'street' => 'Erco 4',
+        'city' => 'Tbilisi, Georgia',
+        'street' => 'Ertso Srteet 4, 0192',
         'tel' => '+995 591 96 51 10', 
       ],
       [
