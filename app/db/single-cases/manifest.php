@@ -24,7 +24,7 @@
     ],
 
     // секция about
-    'about' => '',
+    'about' => "Manifest — digital media magazine about fashion, beauty, personal growth, expertise and philosophy of conscious consumption for modern women.<br><br>The magazine brings together experts from various fields - beauty, psychology, health, ecology and conscious consumption. The idea of ​​the project is to simply and easily tell about everything that is important for a modern woman.",
 
     // секция design
     // 'design' => [

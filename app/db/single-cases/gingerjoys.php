@@ -24,7 +24,8 @@
     ],
 
     // секция about
-    'about' => "Ginger Joys is a marketplace for author's gifts. All products are created with a unique design in a limited or single copy. Each of them has its own story, its own style and its own reason for inspiration. And what is even more important - their own soul, which the master or designer put there.",
+    'about' => "Ginger Joys is a marketplace for author's gifts. All products are created with a unique design in a limited or single copy. Each of them has its own story, its own style and its own reason for inspiration. And what is even more important - their own soul, which the master or designer put there.<br><br>
+    We created an online store with more than 6,500 products and conveyed the idea of exclusivity of each product. Increased sales and scaled up the business.",
 
     // секция design
     'design' => [
