@@ -6,7 +6,7 @@
 
       <div class="sect--columns__inner-content text-ls">
         <ul class="results__list">
-          <li class="results__list-item"><b>3</b>Click to buy</li>
+          <li class="results__list-item"><b>3</b>Clicks to buy</li>
           <li class="results__list-item"><b>2</b>Payment methods</li>
         </ul>
       </div>

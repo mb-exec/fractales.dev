@@ -65,7 +65,7 @@
       [
         'title' => 'PRODUCT CARD',
         'strong' => 'Detailed product description',
-        'text' => "",
+        'text' => "We have thought of a convenient minimalist product card that makes it easy to get acquainted with the product, its appearance, the materials from which it is made, and its other features.",
 
         'img_name' => 'product-card',
         'img_alt' => 'product card preview'
@@ -73,7 +73,7 @@
       [
         'title' => 'PURCHASE',
         'strong' => 'Focus on ease of ordering',
-        'text' => "",
+        'text' => "The buying process should be as open and convenient as possible. We have developed an opportunity to buy an item of interest in a few clicks and quickly return back to the catalog in order to continue plunging into the atmosphere of uniqueness and comfort.",
 
         'img_name' => 'purchase',
         'img_alt' => 'purchase preview'

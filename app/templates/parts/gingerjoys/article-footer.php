@@ -17,7 +17,7 @@
       <div class="sect--columns__inner-content text-ls">
         <ul class="results__list">
           <li class="results__list-item"><b>6500</b>Product cards</li>
-          <li class="results__list-item"><b>2</b>Click to buy</li>
+          <li class="results__list-item"><b>2</b>Clicks to buy</li>
         </ul>
       </div>
     </div>
