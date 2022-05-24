@@ -12,7 +12,7 @@
   &__link {
     color: $--color-primary;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .socials {
@@ -265,6 +265,22 @@
       }
     }
 
+    &__link {
+      font-size: 32px;
+    }
+
+    .socials {
+      font-size: 26px;
+
+      &__item {
+        transition: color $--transition-speed;
+
+        &:hover {
+          color: $--color-primary;
+        }
+      }
+    }
+
     .contact-form-sect {
       &__message {
         text {
@@ -326,6 +342,14 @@
       &-content {
         max-width: 895px;
       }
+    }
+
+    &__link {
+      font-size: 36px;
+    }
+
+    .socials {
+      font-size: 30px;
     }
 
     .contact-form-sect {
