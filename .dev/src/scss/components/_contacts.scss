@@ -30,6 +30,38 @@
     }
   }
 
+  .contact-form-sect {
+    &__form {
+      &.onload {
+        opacity: .5;
+        pointer-events: none;
+      }
+    }
+    
+    &__message {
+      &-title {
+        display: block;
+        font: 600 22px/1.5 $--font-panchang;
+        margin-bottom: 20px;
+        color: $--color-primary;
+
+        &--orange {
+          color: $--color-secondary;
+        }
+      }
+
+      &-text {
+        font-size: 18px;
+        max-width: 620px;
+      }
+
+      &-btn {
+        width: 280px;
+        margin-top: 50px;
+      }
+    }
+  }
+
   .contact-form {
     input,
     textarea {
@@ -166,6 +198,14 @@
       }
     }
 
+    .contact-form-sect {
+      &__message {
+        &-title {
+          font-size: 36px;
+        }
+      }
+    }
+
     .contact-form {
       display: flex;
       flex-flow: wrap;
@@ -225,6 +265,14 @@
       }
     }
 
+    .contact-form-sect {
+      &__message {
+        text {
+          font-size: 20px;
+        }
+      }
+    }
+
     .contact-form {
       &::before,
       &::after {
@@ -277,6 +325,18 @@
     &__sect {
       &-content {
         max-width: 895px;
+      }
+    }
+
+    .contact-form-sect {
+      &__message {
+        &-title {
+          font-size: 48px;
+        }
+
+        &-text {
+          font-size: 24px;
+        }
       }
     }
   }  

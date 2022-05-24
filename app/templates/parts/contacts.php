@@ -51,7 +51,7 @@
                 <button class="attachments__remove" title="remove file"></button>
               </span>
               <label class="file">
-                <input type="file" name="file" class="file__input">
+                <input type="file" name="file" class="file__input" accept=".png, .jpg, .jpeg, .pdf">
                 <span class="file__field">Attach file</span>
               </label>
             </div>
