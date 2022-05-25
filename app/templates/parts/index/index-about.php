@@ -76,7 +76,7 @@ $team = $db['team'];
           
           <div class="swiper-wrapper">
             <?php foreach ( $team as $member) : ?>
-              <?php echo get_member_card( $member, 'swiper-slide', true, 'div') ?>
+              <?php echo get_member_card( $member, 'swiper-slide', false, 'div') ?>
             <?php endforeach ?>
           </div>
         </div>

@@ -3,14 +3,16 @@ $cases_img_dir = '/assets/img/cases/';
 $site_url = get_site_url();
 
 require 'single-cases/fuenf.php';
-require 'single-cases/demetra.php';
-require 'single-cases/meta.php';
-require 'single-cases/fortross.php';
+require 'single-cases/manifest.php';
+require 'single-cases/gingerjoys.php';
+require 'single-cases/orange.php';
+require 'single-cases/bits.php';
 
 $cases = [
   'fuenf' => $fuenf,
-  'demetra' => $demetra,
-  'meta' => $meta,
-  'fortross' => $fortross,
+  'manifest' => $manifest,
+  'gingerjoys' => $gingerjoys,
+  'orange' => $orange,
+  'bits' => $bits,
 ]
 ?>

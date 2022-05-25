@@ -33,11 +33,11 @@
         </div>
       </section>
 
-      <section class="contacts__sect">
+      <section class="contacts__sect contact-form-sect">
         <h3 class="contacts__sect-title">CONTACT US</h3>
 
-        <div class="contacts__sect-content">
-          <form id="contact-form" action="" class="contact-form text-ls">
+        <div class="contacts__sect-content contact-form-sect__form" data-type="form">
+          <form id="contact-form" method="POST" class="contact-form text-ls">
             <input type="text" name="first_name" placeholder="First name" class="field field--fname">
             <input type="text" name="last_name" placeholder="Last name" class="field field--lname">
             <input type="text" name="email" placeholder="Email*" required class="field field--email">
@@ -51,7 +51,7 @@
                 <button class="attachments__remove" title="remove file"></button>
               </span>
               <label class="file">
-                <input type="file" name="file" class="file__input">
+                <input type="file" name="file" class="file__input" accept=".png, .jpg, .jpeg, .pdf">
                 <span class="file__field">Attach file</span>
               </label>
             </div>
@@ -67,6 +67,17 @@
               </button>
             </div>
           </form>
+        </div>
+
+        <div class="contacts__sect-content contact-form-sect__message hidden" data-type="success">
+          <strong class="contact-form-sect__message-title">Thank you!</strong>
+          <p class="contact-form-sect__message-text text-ls">Your application has been sent, the information will be sent to you by mail.</p>
+        </div>
+
+        <div class="contacts__sect-content contact-form-sect__message hidden" data-type="error">
+          <strong class="contact-form-sect__message-title contact-form-sect__message-title--orange">Failed to send your message!</strong>
+          <p class="contact-form-sect__message-text text-ls">Something wrong, try one more time.</p>
+          <button class="contact-form-sect__message-btn btn-hollow">Try again</button>
         </div>
       </section>
     </div>

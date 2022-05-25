@@ -75,6 +75,7 @@
     ?>
   </section>
 
+  <?php if (isset($case['design'])) : ?>
   <section class="sect sect--columns">
     <div class="container">
 
@@ -99,9 +100,8 @@
         'path' => $case['imgs_folder'],
       ]);
     ?>
-
-
   </section>
+  <?php endif ?>
 
   <?php foreach ( $case['sections'] as $section ) : ?>
 
