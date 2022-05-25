@@ -1,4 +1,5 @@
-<?php require 'app/templates/header.php' ?>
+<?php require 'app/templates/header.php' 
+?>
 
 <section class="hero">
   <div class="container">
