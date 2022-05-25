@@ -4,7 +4,7 @@ function get_case_card($case, $index = 0, $animation = true, $tag = 'li') {
   
   if ($animation === true) {
     $animation_direction = $index % 2 ? 'appear-left' : 'appear-right';
-    $animation_attr = ' animation="' . $animation_direction . '"';
+    $animation_attr = ' data-nimation="' . $animation_direction . '"';
   }
 
   $link = $case['page_link'];

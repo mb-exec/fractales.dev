@@ -3,17 +3,17 @@ $steps_list = [
   [
     'icon' => 'focus',
     'title' => 'Focus on the user',
-    'descr' => 'We analyze the target audience and conduct research. We make the product convenient and functional for those who will interact with it.'
+    'descr' => 'We focus on who the target market is, and what their specific needs and goals are. We take a deep dive into what motivates the user through research, journey mapping, wireframes, prototypes, and testing.'
   ],
   [
     'icon' => 'stack',
     'title' => 'Optimal Tech Stack',
-    'descr' => 'We select a stack of technologies depending on the requirements for the project, we find the most relevant and effective solutions. This approach allows you to get a convenient and safe product that can be easily scaled.'
+    'descr' => 'We select a stack of technologies depending on the requirements for the project, we find the most relevant and effective solutions. This approach allows to get a convenient and safe product that can be easily scaled.'
   ],
   [
     'icon' => 'fill',
     'title' => 'Fill with meaning',
-    'descr' => 'Regardless of the subject matter and business objectives, the user interacts with the resource through visuals and text. We create a clear image of the company and talk to a person in a human language.'
+    'descr' => 'We guide the user visually through the product with an attractive, consistent and intuitive interface. A strong UI design filled with purpose makes it easy for the user to understand and trust the brand. '
   ],
   [
     'icon' => 'develop',

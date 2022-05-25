@@ -2,38 +2,47 @@
   $services = [
     [
       'title' => 'Websites development',
-      'descr' => 'We create websites that highlight the brand identity, bring customers and enhance the corporate image of the company.',
+      'descr' => 'We provide solutions ranging from development of the front end user experience to the back end API connections and application builds.',
       'list' => [
-        'Corporate website',
-        'Online shopping',
-        'Landing Pages'
+        'Websites',
+        'eCommerce',
+        'Directory & Listings'
       ]
     ],
     [
-      'title' => 'Design and branding',
-      'descr' => 'We create a holistic image of the company that reflects its values and distinguishes it from competitors. We convey brand ideas to the consumer through metaphors.',
+      'title' => 'Design and Branding',
+      'descr' => 'We create a holistic image of the company that distinguishes it from competitors. Through visual, we convey the ideas of the brand and the values ​​of the company to the consumer.',
       'list' => [
-        'Corporate identity',
-        'Graphic design',
-        'Brand packaging'
+        'Brand Identity',
+        'Graphic Design',
+        'Motion Design'
       ]
     ],
     [
-      'title' => 'Web services',
-      'descr' => 'We develop technological solutions for non-standard tasks: portals, services, personal accounts. We explore JTBD and CJM and understand what drives users.',
+      'title' => 'Software Development',
+      'descr' => 'We develop technological solutions for non-standard tasks: web platforms, enterprise web development, back-end & custom software. We analyze customer tasks and take it into account in the software architecture development.',
       'list' => [
-        'Dashboards',
-        'Services',
-        'Personal accounts'
+        'PWA',
+        'Web Services',
+        'Management Platforms'
       ]
     ],
     [
       'title' => 'UX/UI design',
-      'descr' => 'We develop technological solutions for non-standard tasks: portals, services, personal accounts. We explore JTBD and CJM and understand what drives users.',
+      'descr' => 'We pay close attention to UX design because we know that it directly influences user decisions. We always conduct UX research and analyze user behavior in order to help him navigate the site and get the desired result.',
       'list' => [
         'UX reserch',
-        'Prototype',
-        'Design concept'
+        'Wireframes',
+        'Web & Mobile Interfaces'
+      ]
+    ],
+    [
+      'title' => 'Data Engineering',
+      'descr' => 'We help effectively store, manage, and leverage critical information assets. Our experts batch and analyze your data in real time to produce actionable insights through predictive analytics and machine learning, making business transformation possible.',
+      'list' => [
+        'Big Data',
+        'Internet of Things',
+        'Machine Learning'
       ]
     ],
   ]
@@ -49,7 +58,7 @@
         foreach ( $services as $s ) : 
         $animation_direction = $i % 2 ? 'appear-left' : 'appear-right';
       ?>
-        <li class="service text-ls" animation="<?php echo $animation_direction ?>">
+        <li class="service text-ls" data-animation="<?php echo $animation_direction ?>">
           <h3 class="service__title"><?php echo $s['title'] ?></h3>
           <div class="service__bottom">            
             <p class="service__descr"><?php echo $s['descr'] ?></p>

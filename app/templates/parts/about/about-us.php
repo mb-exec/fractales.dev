@@ -22,15 +22,15 @@ $about_us_list = [
   <div class="container">
     <h2 class="sect__title">About us</h2>
 
-    <div class="sect--columns__inner" animation="appear-bottom">
+    <div class="sect--columns__inner" data-animation="appear-bottom">
       <h3 class="sect--columns__inner-title">HOW WE WORK</h3>
 
       <div class="sect--columns__inner-content text-ls">
-        <p class="about-us__descr">We are not indifferent to the functionality, visual, usefulness and architecture of business processes. When working on a product, we think about how it will help the business and the client.</p>
+        <p class="about-us__descr">We pay attention to functionality, visuality, usefulness and business process architecture. When working on a product, we think about how it will help the business and the client.</p>
       </div>
     </div>
 
-    <ul class="about-us__list" animation="appear-right">
+    <ul class="about-us__list" data-animation="appear-right">
           <?php foreach ( $about_us_list as $item ) : ?>
             <li class="about-us__item">
               <h4 class="about-us__item-title">

@@ -2,7 +2,7 @@
 
 <section class="works">
   <div class="container">
-    <h1 class="works__title title-lg" animation="appear-left">Works</h1>
+    <h1 class="works__title title-lg" data-animation="appear-left">Works</h1>
 
     <ul class="works__list">
       <?php 

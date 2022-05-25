@@ -1,10 +1,11 @@
-<?php require 'app/templates/header.php' ?>
+<?php require 'app/templates/header.php' 
+?>
 
 <section class="hero">
   <div class="container">
     <div class="hero__inner">
-      <h1 class="hero__title" animation="appear-left">We focus on creating<br>a quality digital product for your business</h1>
-      <div class="hero__bottom" animation="appear-right">        
+      <h1 class="hero__title">We focus on creating<br>a quality digital product for your business</h1>
+      <div class="hero__bottom">        
         <p class="hero__text text-ls">Let's create effective website or unique brand identity with attention to detail together</p>
         <a href="#contacts" class="hero__link btn text-ls frame-hover">
           Start project <span class="small-arrow"></span>
