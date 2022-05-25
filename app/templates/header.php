@@ -46,12 +46,12 @@
   <svg xmlns="http://www.w3.org/2000/svg" class="noise body-noise">
     <filter id="noise" x="0" y="0">
       <feTurbulence type="fractalNoise" baseFrequency=".45" numOctaves="3" stitchTiles="stitch"/>
-      <feBlend mode="screen"/>
+      <feBlend mode="screen" in2="floodFill"/>
     </filter>
     <rect filter="url(#noise)" class="noise__rect" height="100%" width="100%"/>
   </svg>
 
-  <header class="hdr" data-animation="appear-top">
+  <header class="hdr">
     <svg xmlns="http://www.w3.org/2000/svg" class="noise hdr__noise">
       <rect filter="url(#noise)" class="noise__rect" height="100%" width="100%"/>
     </svg>

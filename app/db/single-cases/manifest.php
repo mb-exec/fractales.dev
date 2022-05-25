@@ -11,7 +11,7 @@
     'page_link' => $site_url . '/cases/manifest',
 
     // для секции с основной информацией
-    'descr' => '',
+    'descr' => "We prepared a stylish women's digital magazine for launch. Together with the customer, we transformed the Instagram account into a large digital resource with well-thought-out section navigation. Expanded the audience and increased brand awareness.",
 
     'services' => [
       'Web services',

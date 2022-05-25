@@ -26,7 +26,7 @@ $about_us_list = [
       <h3 class="sect--columns__inner-title">HOW WE WORK</h3>
 
       <div class="sect--columns__inner-content text-ls">
-        <p class="about-us__descr">We are not indifferent to the functionality, visual, usefulness and architecture of business processes. When working on a product, we think about how it will help the business and the client.</p>
+        <p class="about-us__descr">We pay attention to functionality, visuality, usefulness and business process architecture. When working on a product, we think about how it will help the business and the client.</p>
       </div>
     </div>
 

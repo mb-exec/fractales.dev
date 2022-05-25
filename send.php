@@ -8,6 +8,7 @@ $first_name = htmlspecialchars($_POST['first_name']);
 $last_name  = htmlspecialchars($_POST['last_name']);
 $email      = htmlspecialchars($_POST['email']);
 $phone      = htmlspecialchars($_POST['phone']);
+$message    = htmlspecialchars($_POST['msg']);
 
 $title = 'Fractales.dev - заявка';
 $body = "
@@ -15,15 +16,16 @@ $body = "
 <b>Фамилия:</b> $last_name<br>
 <b>Почта:</b> $email<br><br>
 <b>Телефон:</b> $phone<br>
+<b>Сообщение:</b><br>$message<br>
 ";
 
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 
 $response = [];
 
-if (!$email || !$phone) {
+if (empty($email)) {
   $response['status'] = 'error';
-  $response['message'] = 'one of this fileds [email, phone] should be filled';
+  $response['message'] = 'email field should be filled';
   echo json_encode($response);
   exit;
 }
@@ -60,12 +62,12 @@ try {
       exit;
     }
 
-    if (!is_dir('uploads')) {
-      mkdir('uploads', 0777, true);
-    }
+    // if (!is_dir('uploads')) {
+    //   mkdir('uploads', 0777, true);
+    // }
 
-    if (move_uploaded_file($file_tmp,"uploads/".$file_name)) {
-      $mail->addAttachment("uploads/".$file_name);
+    if (move_uploaded_file($file_tmp,"/tmp/".$file_name)) {
+      $mail->addAttachment("/tmp/".$file_name);
     } else {
       $response['file'] = "file wasn't upload";
     }

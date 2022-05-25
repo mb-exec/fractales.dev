@@ -30,10 +30,10 @@
     <div class="technology__inner">
       <div class="technology__descr">
         <p>
-          We select technologies based on the tasks of the project. This allows you to take into account compatibility requirements and reduce development time.
-          <br>
-          <br>
-          We proceed from what will provide the maximum result and functionality in the optimal time frame.
+        We select technologies based on the tasks of the project. This allows us to take into account compatibility requirements and reduce development time.
+        <br>
+        <br>
+        We proceed from what will provide the maximum result and functionality in the optimal time frame.
         </p>
 
         <div class="technology__descr-box">
