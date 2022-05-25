@@ -22,7 +22,7 @@ $about_us_list = [
   <div class="container">
     <h2 class="sect__title">About us</h2>
 
-    <div class="sect--columns__inner" animation="appear-bottom">
+    <div class="sect--columns__inner" data-animation="appear-bottom">
       <h3 class="sect--columns__inner-title">HOW WE WORK</h3>
 
       <div class="sect--columns__inner-content text-ls">
@@ -30,7 +30,7 @@ $about_us_list = [
       </div>
     </div>
 
-    <ul class="about-us__list" animation="appear-right">
+    <ul class="about-us__list" data-animation="appear-right">
           <?php foreach ( $about_us_list as $item ) : ?>
             <li class="about-us__item">
               <h4 class="about-us__item-title">

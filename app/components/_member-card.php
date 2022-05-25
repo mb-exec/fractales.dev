@@ -17,7 +17,7 @@ function get_member_card($member, $class = '', $animation = false, $tag = 'li') 
   $position = $member['position'];
   $class = $class !== '' ? ' ' . $class : ''; 
   $animation_attr = $animation === true 
-    ? ' animation="appear-bottom"'
+    ? ' data-animation="appear-bottom"'
     : '';
 
   return <<<EOL

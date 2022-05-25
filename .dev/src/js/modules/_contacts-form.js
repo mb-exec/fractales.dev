@@ -38,6 +38,7 @@
     })
     .then(res => res.json())
     .then(data => {
+      console.log(data);
       if (responseStatuses[data.status]) {
         responseStatuses[data.status]()
       }
@@ -68,6 +69,7 @@
     showForm()
     clearAttachmentFileInfo()
     sendFile = true
+    attachmentsPreview.classList.remove('attached')
   })
 
   function setAttachmentFileInfo(name) {

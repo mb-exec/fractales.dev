@@ -51,7 +51,7 @@
     <rect filter="url(#noise)" class="noise__rect" height="100%" width="100%"/>
   </svg>
 
-  <header class="hdr" animation="appear-top">
+  <header class="hdr" data-animation="appear-top">
     <svg xmlns="http://www.w3.org/2000/svg" class="noise hdr__noise">
       <rect filter="url(#noise)" class="noise__rect" height="100%" width="100%"/>
     </svg>

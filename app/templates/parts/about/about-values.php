@@ -19,7 +19,7 @@ $list = [
   <div class="container">
     <h2 class="sect__title">Our values</h2>
 
-    <ul class="about-values__list text-ls" animation="appear-bottom">
+    <ul class="about-values__list text-ls" data-animation="appear-bottom">
       <?php foreach ( $list as $item ) : ?>
         <li class="about-values__item">
           <h3 class="about-values__item-title"><?php echo $item['title'] ?></h3>

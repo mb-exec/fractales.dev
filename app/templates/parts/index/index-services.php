@@ -49,7 +49,7 @@
         foreach ( $services as $s ) : 
         $animation_direction = $i % 2 ? 'appear-left' : 'appear-right';
       ?>
-        <li class="service text-ls" animation="<?php echo $animation_direction ?>">
+        <li class="service text-ls" data-animation="<?php echo $animation_direction ?>">
           <h3 class="service__title"><?php echo $s['title'] ?></h3>
           <div class="service__bottom">            
             <p class="service__descr"><?php echo $s['descr'] ?></p>

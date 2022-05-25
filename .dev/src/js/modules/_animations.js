@@ -2,7 +2,7 @@
   setAnimationAttrForAllSectionTitles()
 
   setTimeout(() => {
-    const elemsForAnimation = document.querySelectorAll('[animation]')
+    const elemsForAnimation = document.querySelectorAll('[data-animation]')
     runAnimations(elemsForAnimation)
     window.addEventListener('scroll', () => {
       runAnimations(elemsForAnimation)
@@ -12,7 +12,7 @@
   function runAnimations(elems) {
     elems.forEach(el => {
       if (isInViewport(el)) {
-        el.setAttribute('animation-active', '')
+        el.setAttribute('data-animation-active', '')
       }
     })
   }
@@ -20,7 +20,7 @@
   function setAnimationAttrForAllSectionTitles() {
     const titles = document.querySelectorAll('.sect__title')
     titles.forEach(title => {
-      title.setAttribute('animation', 'appear-left')
+      title.setAttribute('data-animation', 'appear-left')
     })
   }
 })();
