@@ -22,6 +22,12 @@
       'styles' => [
         'index-page' => '1.0.0'
       ],
+      'og' => [
+        'description' => '',
+        'type' => 'website',
+        'url' => get_site_url(),
+        'img' => '',
+      ]
     ],
 
     'about' => [

@@ -1,15 +1,26 @@
 <?php require dirname(__DIR__, 2) . '/app/functions.php' ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" <?php echo isset($page['og']) ? 'prefix="og: http://ogp.me/ns#"' : '' ?>>
 <head>
   <meta charset="UTF-8">
+  <title><?php echo $page['title'] ?></title>
+
+  <?php if(!empty($page['description'])) : ?>
+    <meta name="description" content="<?php echo $page['description'] ?>">
+  <?php endif ?>
+
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no, viewport-fit=cover">
 
-  <meta name="description" content="<?php echo $page['description'] ?>">
+  <meta property="og:title" content="<?php echo $page['title'] ?>">
 
-  <title><?php echo $page['title'] ?></title>
+  <?php if (isset($page['og'])) : ?>
+    <meta property="og:description" content="<?php echo $page['og']['description'] ?>"/>
+    <meta property="og:type" content="<?php echo $page['og']['type'] ?>"/>
+    <meta property="og:image" content="<?php echo $page['og']['img'] ?>"/>
+    <meta property="og:url" content= "<?php echo $page['og']['url'] ?>" />
+  <?php endif ?>
 
   <?php 
     // styles
