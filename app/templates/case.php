@@ -22,7 +22,7 @@
     <div class="container">
 
       <div class="sect--columns__inner">
-        <h2 class="info__title sect--columns__inner-title text-ls"><?php echo $case['tag'] ?></h2>
+        <span class="info__title sect--columns__inner-title text-ls"><?php echo $case['tag'] ?></span>
 
         <div class="sect--columns__inner-content text-ls">
           <p><?php echo $case['descr'] ?></p>
@@ -84,7 +84,7 @@
 
         <div class="sect--columns__inner-content text-ls">
           <p class="case__text-content">
-            <strong><?php echo $case['design']['strong'] ?></strong>
+            <span class="case__text-title"><?php echo $case['design']['strong'] ?></span>
             <?php echo $case['design']['text'] ?>
           </p>
 
@@ -110,11 +110,11 @@
     <div class="container">
 
       <div class="sect--columns__inner">
-        <h2 class="case__sect-title sect--columns__inner-title"><?php echo $section['title'] ?></h2>
+        <p class="case__sect-title sect--columns__inner-title"><?php echo $section['title'] ?></p>
 
         <div class="sect--columns__inner-content text-ls">
+          <h2 class="case__text-title"><?php echo $section['strong'] ?></h2>
           <p class="case__text-content">
-            <strong><?php echo $section['strong'] ?></strong>
             <?php echo $section['text'] ?> 
           </p>
         </div>

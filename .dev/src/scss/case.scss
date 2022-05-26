@@ -19,13 +19,11 @@
     font-size: 18px;
   }
 
-  &__text-content {
-    strong {
-      display: block;
-      font-size: 20px;
-      font-weight: 400;
-      margin-bottom: 15px;
-    }
+  &__text-title {
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 15px;
   }
 
   .pic {
@@ -169,11 +167,9 @@
       font-size: 20px;
     }
 
-    &__text-content {
-      strong {
-        font-size: 26px;
-        margin-bottom: 20px;
-      }
+    &__text-title {
+      font-size: 26px;
+      margin-bottom: 20px;
     }
 
     &-hdr {
@@ -226,12 +222,9 @@
       font-size: 24px;
     }
 
-    &__text-content {
-      strong {
-        font-size: 30px;
-      }
+    &__text-title {
+      font-size: 30px;
     }
-
 
     &-hdr {
       &__title {
