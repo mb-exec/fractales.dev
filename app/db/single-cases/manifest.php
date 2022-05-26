@@ -24,7 +24,7 @@
     ],
 
     // секция about
-    'about' => "Manifest — digital media magazine about fashion, beauty, personal growth, expertise and philosophy of conscious consumption for modern women.<br><br>The magazine brings together experts from various fields - beauty, psychology, health, ecology and conscious consumption. The idea of ​​the project is to simply and easily tell about everything that is important for a modern woman.",
+    'about' => "Manifest is a digital media magazine about fashion, beauty, personal growth, expertise and philosophy of conscious consumption for modern women.<br><br>The magazine brings together experts from various fields - beauty, psychology, health, ecology and conscious consumption. The idea of ​​the project is to simply and easily tell about everything that is important for a modern woman.",
 
     // секция design
     // 'design' => [
@@ -47,8 +47,9 @@
     'sections' => [
       [
         'title' => 'MAIN PAGE',
-        'strong' => '',
-        'text' => "",
+        'strong' => 'Lightweight and uncluttered interface',
+        'text' => "To present articles on the site, a broken grid was used for more interesting presentation of information. Between information sections with articles, a diluting section with a quote from a famous person was added, which changes every day and inspires the reader.<br><br>
+        Also on the main page there is a section with expert articles, expert answers and the ability to subscribe to the newsletter.",
 
         'img_name' => 'main-page',
         'img_alt' => ''
@@ -56,31 +57,34 @@
       [
         'title' => 'WEEKLY HOROSCOPE',
         'strong' => '',
-        'text' => "",
+        'text' => "Exclusive horoscope for all zodiac signs from a personal astrologer. Readers can find out what events await them each week.",
 
         'img_name' => 'horoscope',
         'img_alt' => ''
       ],
       [
         'title' => 'MANIFESTO PAGES',
-        'strong' => '',
-        'text' => "",
+        'strong' => 'Separate pages with filtering for each category',
+        'text' => "All articles on the site are divided into five large headings, which are also divided into narrower subheadings. It is easy to switch from one manifest to another on the site, and the presence of subcategories works like filtering.",
 
         'img_name' => 'manifesto-pages',
         'img_alt' => ''
       ],
       [
         'title' => 'ARTICLE PAGES',
-        'strong' => '',
-        'text' => "",
+        'strong' => 'Considered possible options for presenting information',
+        'text' => "To retain the user, we used a thematic selection of materials on the topic of the article and an endless scroll of articles similar to scrolling in social networks.<br><br>
+        We thought over possible options for presenting information in the article. We set up heading levels, lists, tables, audio and video fragments, quotes, callouts from the text, and various image alignment options.",
 
         'img_name' => 'article-pages',
         'img_alt' => ''
       ],
       [
         'title' => 'AUTHORS',
-        'strong' => '',
-        'text' => "",
+        'strong' => 'Emphasis on attracting authors',
+        'text' => "We focused on attracting authors. We rendered a separate page with a convenient switching application form.<br><br>
+        To make it profitable for authors to cooperate with the magazine, a separate author page has been developed, which contains brief information about the expert, photos and his articles and answers. So each author has his own column in the magazine, his own voice, his own name.<br><br>
+        The emphasis on the \"Become an author\" page was also made in the menu, making the transition to the page in the form of a button that attracts attention.",
 
         'img_name' => 'authors',
         'img_alt' => ''
@@ -88,7 +92,7 @@
     ],
 
     'templates' => [
-      'fuenf/fuenf-results.php',
+      'manifest/manifest-results.php',
     ]
   ]
 ?>
