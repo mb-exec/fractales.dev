@@ -26,22 +26,22 @@
     // секция design
     'design' => [
       'strong' => 'Emphasized the uniqueness of the brand',
-      'text' => "The singularity and modernity of education are concentrated with the help of animation, non-standard grid and graphic elements. Running lines with the brand name complement the overall style and contribute to the formation of the brand image. Large photos allow you to see the clothes in the smallest detail.<br><br>Thanks to the minimalistic design, we focus the user's attention on the photos of the new collection"
+      'text' => "The singularity and modernity of brand are concentrated with the help of animation, non-standard grid and graphic elements. Running lines with the brand name complement the overall style and contribute to the formation of the brand image. Large photos allow you to see the clothes in the smallest detail.<br><br>Thanks to the minimalistic design, we focus the user's attention on the photos of the new collection"
     ],
 
     // изображения для секций
     'imgs' => [
       'header' => [
         'name' => 'hdr',
-        'alt' => 'Site preview on laptop'
+        'alt' => 'Site preview on laptop with abstract background'
       ],
       'about' => [
         'name' => 'about',
-        'alt' => 'Site preview on mobile'
+        'alt' => 'Two mobile phones with site previews'
       ],
       'design' => [
         'name' => 'design',
-        'alt' => ''
+        'alt' => 'Mobile and desktop site examples'
       ]
     ],
 
@@ -50,18 +50,18 @@
       [
         'title' => 'PRODUCT CARD',
         'strong' => 'Detailed product description and size guide',
-        'text' => "The singularity and modernity of education are concentrated with the help of animation, non-standard grid and graphic elements. Running lines with the brand name complement the overall style and contribute to the formation of the brand image. Large photos allow you to see the clothes in the smallest detail.",
+        'text' => "The singularity and modernity of brand are concentrated with the help of animation, non-standard grid and graphic elements. Running lines with the brand name complement the overall style and contribute to the formation of the brand image. Large photos allow you to see the clothes in the smallest detail.",
 
         'img_name' => 'product-card',
-        'img_alt' => ''
+        'img_alt' => 'Mobile and desktop product card page examples'
       ],
       [
         'title' => 'PURCHASE',
-        'strong' => 'Focus on ease of ordering',
+        'strong' => 'Focus on simple checkout',
         'text' => "Despite the fact that we made a landing, it works like a full-fledged online store - you can select a product, view it from all sides and order.<br><br>You can pay for the goods through PayPal or immediately with a bank card using the Stripe service. We connected both payment methods using the API.",
 
         'img_name' => 'purchase',
-        'img_alt' => ''
+        'img_alt' => 'Girl in black t-short and red skirt on left side, on right side mobile order form preview'
       ]
     ],
 

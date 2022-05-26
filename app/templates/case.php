@@ -10,7 +10,7 @@
         'class' => 'case-hdr__pic pic',
         'name'  => $case['imgs']['header']['name'],
         'path'  => $case['imgs_folder'],
-        'alt'   => 'Site preview on laptop',
+        'alt'   => $case['imgs']['header']['alt'],
       ]);
     ?>
     <div class="container">
@@ -98,6 +98,7 @@
         'class' => 'pic',
         'name' => $case['imgs']['design']['name'],
         'path' => $case['imgs_folder'],
+        'alt' => $case['imgs']['design']['alt'],
       ]);
     ?>
   </section>
