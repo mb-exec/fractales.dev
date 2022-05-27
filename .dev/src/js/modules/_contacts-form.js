@@ -12,7 +12,7 @@
   const errorMessage = document.querySelector('.contact-form-sect__message[data-type="error"]')
   const reloadBtn = document.querySelector('.contact-form-sect__message-btn')
 
-  const responseStatuses = {
+  const responseHandlers = {
     'success': showSuccess,
     'error': showError,
   }
@@ -21,7 +21,6 @@
 
   form.addEventListener('submit', e => {
     e.preventDefault()
-
     const data = new FormData(form)
 
     if (!sendFile) {
@@ -39,8 +38,8 @@
     .then(res => res.json())
     .then(data => {
       console.log(data);
-      if (responseStatuses[data.status]) {
-        responseStatuses[data.status]()
+      if (responseHandlers[data.status]) {
+        responseHandlers[data.status]()
       }
     })
     .catch(e => console.log(e))

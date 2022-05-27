@@ -26,7 +26,7 @@
           <ul class="socials">
             <?php foreach ( $socials as $name => $link ) : ?>
               <li class="socials__item">
-                <a href="<?php echo $link ?>" class="socials__link"><?php echo $name ?></a>
+                <a href="<?php echo $link ?>" class="socials__link" target="_blank"><?php echo $name ?></a>
               </li>
             <?php endforeach ?>
           </ul>
@@ -40,8 +40,8 @@
           <form id="contact-form" method="POST" class="contact-form text-ls">
             <input type="text" name="first_name" placeholder="First name" class="field field--fname">
             <input type="text" name="last_name" placeholder="Last name" class="field field--lname">
-            <input type="text" name="email" placeholder="Email*" required class="field field--email">
-            <input type="text" name="phone" placeholder="Phone number" class="field field--phone">
+            <input type="email" name="email" placeholder="Email*" required class="field field--email">
+            <input type="number" name="phone" placeholder="Phone number" class="field field--phone">
 
             <textarea name="msg" placeholder="Tell about your task" class="field field--msg"></textarea>
 
