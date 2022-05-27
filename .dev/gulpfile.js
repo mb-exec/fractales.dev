@@ -25,7 +25,7 @@ const ttfToWoff = require("gulp-ttf-to-woff");
 const webp = require('gulp-webp');
 
 function styles() {
-  return src('./src/scss/*.scss')
+  return src('./src/scss/*.scss', {since: lastRun(styles)})
     .pipe(sass())
     .pipe(gulpIf(IS_PROD, combine(
       gcmq(),
@@ -35,7 +35,7 @@ function styles() {
 }
 
 function scripts() {
-  return src(['./src/js/*.js', './src/js/vendor/*.js'])
+  return src(['./src/js/*.js', './src/js/vendor/*.js'], {since: lastRun(scripts)})
     .pipe(include())
     .pipe(gulpIf(IS_PROD, uglify()))
     .pipe(dest(destPath + 'js'))
