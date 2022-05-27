@@ -11,17 +11,29 @@
   <?php endif ?>
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no, viewport-fit=cover">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=2.0">
+  <meta name="HandheldFriendly" content="True"/>
 
-  <meta property="og:title" content="<?php echo $page['title'] ?>">
+  <!-- PRELOAD -->
+  <?php
+    $fonts = [
+      'Heebo-Regular',
+      'Panchang-Medium',
+      'Panchang-Semibold',
+      'Poppins-Regular',
+      'Poppins-Medium',
+    ];
 
-  <?php if (isset($page['og'])) : ?>
-    <meta property="og:description" content="<?php echo $page['og']['description'] ?>"/>
-    <meta property="og:type" content="<?php echo $page['og']['type'] ?>"/>
-    <meta property="og:image" content="<?php echo $page['og']['img'] ?>"/>
-    <meta property="og:url" content= "<?php echo $page['og']['url'] ?>" />
-  <?php endif ?>
+    foreach ( $fonts as $font ) : ?>
+    <link rel="preload" href="<?php echo "$site_url/assets/fonts/$font.woff" ?>" as="font" type="font/woff" crossorigin="anonymous" />
+  <?php endforeach ?>
 
+  <link rel="preload" href="<?php echo "$site_url/assets/img/logo.svg" ?>" as="image"/>
+  <link rel="preload" href="<?php echo "$site_url/assets/img/icons/burger.svg" ?>" as="image"/>
+  <!-- PRELOAD -->
+
+  <!-- STYLES & SCRIPTS -->
   <?php 
     // styles
       foreach ( $pages['global']['styles'] as $style_name => $ver ) {
@@ -41,6 +53,7 @@
       echo get_script_link($script_name, $ver);
     } 
   ?>
+  <!-- STYLES & SCRIPTS -->
   <!-- FAV -->
   <link rel="apple-touch-icon" sizes="180x180" href="<?php echo $site_url ?>/fav/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="<?php echo $site_url ?>/fav/favicon-32x32.png">
@@ -50,6 +63,14 @@
   <meta name="msapplication-TileColor" content="#ff7842">
   <meta name="theme-color" content="#ffffff">
   <!-- FAV -->
+
+  <meta property="og:title" content="<?php echo $page['title'] ?>">
+  <?php if (isset($page['og'])) : ?>
+    <meta property="og:description" content="<?php echo $page['og']['description'] ?>"/>
+    <meta property="og:type" content="<?php echo $page['og']['type'] ?>"/>
+    <meta property="og:image" content="<?php echo $page['og']['img'] ?>"/>
+    <meta property="og:url" content= "<?php echo $page['og']['url'] ?>" />
+  <?php endif ?>
 </head>
 
 <body>
