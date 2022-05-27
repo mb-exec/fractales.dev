@@ -52,17 +52,25 @@
     </div>
   </section>
 
-  <?php foreach ( $case['sections'] as $section ) : ?>
+  <?php foreach ( $case['sections'] as $section ) : 
+      $name = $section['name'];
+      $hasTitle = isset($section['title']) && !empty($section['title']);
+      $sectionNameTag = $hasTitle ? 'span': 'h2';
+
+      $sectionName = <<<EOL
+        <$sectionNameTag class="case__sect-title sect--columns__inner-title">$name</$sectionNameTag>
+      EOL;
+    ?>
 
     <section class="sect sect--columns">
       <div class="container">
 
         <div class="sect--columns__inner">
-          <span class="case__sect-title sect--columns__inner-title"><?php echo $section['name'] ?></span>
+          <?php echo $sectionName ?>
 
           <div class="sect--columns__inner-content text-ls">
             
-            <?php if (!empty($section['title'])) : ?>
+            <?php if ($hasTitle) : ?>
               <h2 class="case__text-title"><?php echo $section['title'] ?></h2>
             <?php endif ?>
 
