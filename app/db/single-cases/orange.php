@@ -29,7 +29,7 @@
     'sections' => [
       [
         'name' => 'ABOUT PROJECT',
-        'name' => '',
+        'title' => '',
         'text' => "Orange is working offline business with 10 beauty salons. The value of the service is a friendly atmosphere, long—term relationships with customers, individual approach.<br><br>
         more than 100 services that differ in configuration and cost from salon to salon.",
 
