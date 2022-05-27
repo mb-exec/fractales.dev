@@ -17,6 +17,10 @@
     // border-image-slice: 5;
     // border-image-repeat: round;    
   }
+
+  &__img {
+    background: url('../img/img-placeholder.svg') center/cover;
+  }
 }
 
 .about-us {
