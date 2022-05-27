@@ -1,5 +1,5 @@
 (function() {
-  const FORM_URL = window.location.origin + '/fractales/send.php';
+  const FORM_URL = window.location.origin + '/send.php';
 
   const form = document.getElementById('contact-form')
   const fileInput = document.querySelector('.file__input')
