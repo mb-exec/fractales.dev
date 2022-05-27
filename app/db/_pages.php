@@ -39,11 +39,17 @@
       'styles' => [
         'about' =>  '1.0.0',
       ],
+      'preloads' => [
+        [
+          'as' => '',
+          'href' => ''
+        ]
+      ]
     ],
     
     'works' => [
       'title' => 'Our works | fractales dev ',
-      'description' => '',
+      'description' => "We take a conscious approach to every project and always immerse ourselves deeply in the client's business and work hard to achieve the result.",
       'scripts' => [],
       'styles' => [
         'works' =>  '1.0.0',
@@ -51,18 +57,18 @@
     ],
 
     'fuenf' => [
-      'title' => 'Fractales - fuenf case description',
-      'description' => '',
+      'title' => 'FUENF X THE BRVTALIST collaboration | fractales dev',
+      'description' => 'We created a modern landing page to present the new FUENF collection.',
       'scripts' => [],
       'styles' => [
         'case' =>  '1.0.0',
         'fuenf' =>  '1.0.0'
-      ],
+      ]
     ],
 
     'manifest' => [
-      'title' => 'Fractales - manifest case description',
-      'description' => '',
+      'title' => 'Digital media magazine MANIFEST | fractales dev',
+      'description' => "We created a stylish women's digital magazine. Transformed the Instagram account into a large digital resource with well-thought-out section navigation.",
       'scripts' => [],
       'styles' => [
         'case' =>  '1.0.0',
@@ -70,8 +76,8 @@
     ],
 
     'gingerjoys' => [
-      'title' => 'Fractales - gingerjoys case description',
-      'description' => '',
+      'title' => 'Author’s gifts GINGER JOYS | fractales dev',
+      'description' => "We have created a unique design and developed a functional online store for marketplace for author's gifts.",
       'scripts' => [],
       'styles' => [
         'case' =>  '1.0.0',
@@ -79,8 +85,8 @@
     ],
 
     'orange' => [
-      'title' => 'Fractales - orange case description',
-      'description' => '',
+      'title' => 'Beauty salon chain ORANGE | fractales dev',
+      'description' => "We created a brand identity for a beauty salons chain and based on it we developed a redesign of their website.",
       'scripts' => [],
       'styles' => [
         'case' =>  '1.0.0',
@@ -88,8 +94,8 @@
     ],
 
     'bits' => [
-      'title' => 'Fractales - bits digital design case description',
-      'description' => '',
+      'title' => 'Digital marketing agency BITS | fractales dev',
+      'description' => "We created a concise modern corporate website for an international design agency.",
       'scripts' => [],
       'styles' => [
         'case' =>  '1.0.0',
@@ -97,8 +103,8 @@
     ],
 
     'profitnes' => [
-      'title' => 'Fractales - profitnes case description',
-      'description' => '',
+      'title' => 'Weight loss course PROFITNESS | fractales dev',
+      'description' => "We made a web application that forms an individual nutrition and training plan, taking into account all user’s preferences and restrictions. ",
       'scripts' => [],
       'styles' => [
         'case' =>  '1.0.0',
