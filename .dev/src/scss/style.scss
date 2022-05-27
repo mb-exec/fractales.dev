@@ -21,6 +21,7 @@ body {
 
 .main {
   overflow: hidden;
+  padding-top: 66px;
 }
 
 .body-noise {
@@ -83,9 +84,13 @@ body {
   }
 
   &__logo {
-    width: 140px;
-    height: 25px;
+    display: block;
     margin-right: auto;
+
+    &-img {
+      width: 140px;
+      height: 25px;
+    }
   }
 
   &__menu {
@@ -238,8 +243,10 @@ body {
 @media screen and (min-width: 767.98px) {
   .hdr {
     &__logo {
-      width: 170px;
-      height: 30px;
+      &-img {
+        width: 170px;
+        height: 30px;
+      }
     }
 
     &__menu {
@@ -286,6 +293,10 @@ body {
 
   .burger {
     display: none;
+  }
+
+  .main {
+    padding-top: 71px;
   }
 
   .ftr {
@@ -350,6 +361,10 @@ body {
     }
   }
 
+  .main {
+    padding-top: 79px;
+  }
+
   .ftr {
     &__top {
       max-width: 205px;
@@ -390,9 +405,15 @@ body {
     }
 
     &__logo {
-      width: 2000px;
-      height: 35px;
+      &-img {
+        width: 200px;
+        height: 35px;
+      }
     }
+  }
+
+  .main {
+    padding-top: 106px;
   }
 
   .ftr {

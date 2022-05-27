@@ -6,10 +6,7 @@
   hdrScroll(hdrHeight);
 
   function hdrScroll(hdrHeight) {
-    const main = document.querySelector('.main');
     const navLinks = document.querySelectorAll('.hdr__menu .nav__link')
-
-    main.style.paddingTop = hdrHeight + 'px';
 
     let prevScrollYPosition = 0;
 

@@ -27,7 +27,8 @@
 
   &--columns {
     &__inner {
-      &-title {          
+      &-title { 
+        display: inline-block;         
         color: $--color-primary;
         font-weight: 400;
         margin-bottom: 15px;
