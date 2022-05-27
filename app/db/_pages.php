@@ -95,5 +95,14 @@
         'case' =>  '1.0.0',
       ],
     ],
+
+    'profitnes' => [
+      'title' => 'Fractales - profitnes case description',
+      'description' => '',
+      'scripts' => [],
+      'styles' => [
+        'case' =>  '1.0.0',
+      ],
+    ],
   ]
 ?>
