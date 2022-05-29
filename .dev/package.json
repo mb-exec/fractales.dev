@@ -4,12 +4,13 @@
     "url": "https://github.com/mb-exec/fractales.dev.git"
   },
   "scripts": {
-    "start": "NODE_ENV='development' gulp dev",
-    "build": "NODE_ENV='production' gulp build",
+    "start": "cross-env NODE_ENV='development' gulp dev",
+    "build": "cross-env NODE_ENV='production' gulp build",
     "deploy": "npm run build && gulp deploy"
   },
   "dependencies": {
     "browser-sync": "^2.27.9",
+    "cross-env": "^7.0.3",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-csso": "^4.0.1",
