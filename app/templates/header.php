@@ -11,7 +11,6 @@
   <?php endif ?>
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=2.0">
   <meta name="HandheldFriendly" content="True"/>
 
@@ -26,31 +25,43 @@
     ];
 
     foreach ( $fonts as $font ) : ?>
-    <link rel="preload" href="<?php echo "$site_url/assets/fonts/$font.woff" ?>" as="font" type="font/woff" crossorigin="anonymous" />
+    <link rel="preload" href="<?php echo "$site_url/assets/fonts/$font.woff" ?>" as="font" type="font/woff" crossorigin/>
   <?php endforeach ?>
 
-  <link rel="preload" href="<?php echo "$site_url/assets/img/logo.svg" ?>" as="image"/>
-  <link rel="preload" href="<?php echo "$site_url/assets/img/icons/burger.svg" ?>" as="image"/>
+  <?php 
+    // images
+    echo get_img_preload("$site_url/assets/img/logo.svg");
+    echo get_img_preload("$site_url/assets/img/icons/burger.svg");
+
+    // styles
+    foreach ( $pages['global']['styles'] as $style_name => $ver ) {
+      echo get_style_link(['name' => $style_name, 'preload' => true]);
+    }
+
+    foreach ( $page['styles'] as $style_name => $ver ) {
+      echo get_style_link(['name' => $style_name, 'preload' => true]);
+    }
+  ?>    
   <!-- PRELOAD -->
 
   <!-- STYLES & SCRIPTS -->
   <?php 
     // styles
       foreach ( $pages['global']['styles'] as $style_name => $ver ) {
-        echo get_style_link($style_name);
+        echo get_style_link(['name' => $style_name]);
       }
 
       foreach ( $page['styles'] as $style_name => $ver ) {
-        echo get_style_link($style_name);
+        echo get_style_link(['name' => $style_name]);
       }
 
     // scripts
-    foreach ( $pages['global']['scripts'] as $script_name => $ver ) {
-      echo get_script_link($script_name, $ver);
+    foreach ( $pages['global']['scripts'] as $script_name ) {
+      echo get_script_link(['name' => $script_name]);
     }  
 
-    foreach ( $page['scripts'] as $script_name => $ver ) {
-      echo get_script_link($script_name, $ver);
+    foreach ( $page['scripts'] as $script_name ) {
+      echo get_script_link(['name' => $script_name]);
     } 
   ?>
   <!-- STYLES & SCRIPTS -->
