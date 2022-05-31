@@ -236,7 +236,7 @@ body {
   &__policy {
     display: block;
     margin-bottom: 20px;
-    text-decoration: underline;
+    border-bottom: 1px solid $--color-gray;
   }
 }
 

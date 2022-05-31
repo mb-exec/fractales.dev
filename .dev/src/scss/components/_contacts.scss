@@ -187,11 +187,6 @@
 
     &__send {
       width: 100%;
-      transition: transform $--transition-speed;
-
-      &:focus {
-        transform: scale(.9);
-      }
     }
   }
 }
@@ -277,6 +272,11 @@
 
     &__link {
       font-size: 32px;
+      transition: opacity $--transition-speed;
+
+      &:hover {
+        opacity: .5;
+      }
     }
 
     .socials {
@@ -326,6 +326,20 @@
 
       .field {
         padding: 14px 20px;
+      }
+
+      .file {
+        &:focus-within {
+          opacity: .5;
+        }
+        
+        &__field {
+          transition: opacity $--transition-speed;
+
+          &:hover {
+            opacity: .5;
+          }
+        }
       }
 
       &__warning {
