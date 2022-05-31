@@ -48,7 +48,7 @@
             <div class="attachments">
               <span class="attachments__preview">
                 <span class="attachments__name"></span>
-                <button class="attachments__remove" title="remove file"></button>
+                <button class="attachments__remove" title="remove file" aria-label="remove attachment"></button>
               </span>
               <label class="file">
                 <input type="file" name="file" class="file__input" accept=".png, .jpg, .jpeg, .pdf">

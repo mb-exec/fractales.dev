@@ -13,6 +13,8 @@
  */
 
 function get_picture_tag($args) {
+  global $webp_support;
+
   $default_args = [
     'class'  => '',
     'decode' => 'async',
@@ -35,20 +37,19 @@ function get_picture_tag($args) {
 
   $src = $path . $name;
 
+  $file_ext = $webp_support ? 'webp' : 'jpg';
+  $img_type = $webp_support ? 'webp' : 'jpeg';
+
   $html = <<<EOL
     <picture $class>
-      <source media="(min-width: 1279.98px)" srcset="$src-lg.webp" type="image/webp">
-      <source media="(min-width: 1279.98px)" srcset="$src-lg.jpg" type="image/jpeg">
+      <source media="(min-width: 1279.98px)" srcset="$src-lg.$file_ext" type="image/$img_type">
 
-      <source media="(min-width: 1023.98px)" srcset="$src-md.webp" type="image/webp">
-      <source media="(min-width: 1023.98px)" srcset="$src-md.jpg" type="image/jpeg">
+      <source media="(min-width: 1023.98px)" srcset="$src-md.$file_ext" type="image/$img_type">
 
-      <source media="(min-width: 767.98px)" srcset="$src-sm.webp" type="image/webp">
-      <source media="(min-width: 767.98px)" srcset="$src-sm.jpg" type="image/jpeg">
+      <source media="(min-width: 767.98px)" srcset="$src-sm.$file_ext" type="image/$img_type">
 
-      <source media="(max-width: 767.98px)" srcset="$src-xs.webp" type="image/webp">
-      <source media="(max-width: 767.98px)" srcset="$src-xs.jpg" type="image/jpeg">
-      <img $lazy src="$src-lg.jpg" alt="$alt" decoding="$decoding">
+      <source media="(max-width: 767.98px)" srcset="$src-xs.$file_ext" type="image/$img_type">
+      <img $lazy src="$src-lg.$file_ext" alt="$alt" decoding="$decoding">
     </picture>
   EOL;
 
