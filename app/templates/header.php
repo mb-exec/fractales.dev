@@ -38,11 +38,11 @@
     } 
 
     // styles
-    foreach ( $pages['global']['styles'] as $style_name => $ver ) {
+    foreach ( $pages['global']['styles'] as $style_name ) {
       echo get_style_link(['name' => $style_name, 'preload' => true]);
     }
 
-    foreach ( $page['styles'] as $style_name => $ver ) {
+    foreach ( $page['styles'] as $style_name ) {
       echo get_style_link(['name' => $style_name, 'preload' => true]);
     }
   ?>    
@@ -51,11 +51,11 @@
   <!-- STYLES & SCRIPTS -->  
   <?php 
     // styles
-      foreach ( $pages['global']['styles'] as $style_name => $ver ) {
+      foreach ( $pages['global']['styles'] as $style_name ) {
         echo get_style_link(['name' => $style_name]);
       }
 
-      foreach ( $page['styles'] as $style_name => $ver ) {
+      foreach ( $page['styles'] as $style_name ) {
         echo get_style_link(['name' => $style_name]);
       }
   ?>
@@ -83,11 +83,12 @@
   <!-- FAV -->
 
   <meta property="og:title" content="<?php echo $page['title'] ?>">
+  <meta property="og:description" content="<?php echo $page['description'] ?>"/>
   <?php if (isset($page['og'])) : ?>
-    <meta property="og:description" content="<?php echo $page['og']['description'] ?>"/>
     <meta property="og:type" content="<?php echo $page['og']['type'] ?>"/>
     <meta property="og:image" content="<?php echo $page['og']['img'] ?>"/>
-    <meta property="og:url" content= "<?php echo $page['og']['url'] ?>" />
+    <meta property="og:image:type" content="<?php echo $page['og']['img_type'] ?>" />
+    <meta property="og:url" content= "<?php echo $page['og']['url'] ?>"/>
   <?php endif ?>
 </head>
 

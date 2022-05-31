@@ -10,7 +10,7 @@
       ],
 
       'styles' => [
-        'style' => '1.0.0',
+        'style'
       ],
     ], 
 
@@ -23,13 +23,13 @@
         'index-page',
       ],
       'styles' => [
-        'index-page' => '1.0.0'
+        'index-page',
       ],
       'og' => [
-        'description' => '',
         'type' => 'website',
-        'url' => get_site_url(),
-        'img' => '',
+        'url' => $site_url,
+        'img' => "$site_url/assets/img/main-share.png",
+        'img_type' => 'image/png',
       ]
     ],
 
@@ -40,7 +40,13 @@
         'about',
       ],
       'styles' => [
-        'about' =>  '1.0.0',
+        'about'
+      ],
+      'og' => [
+        'type' => 'website',
+        'url' => "$site_url/about",
+        'img' => "$site_url/assets/img/main-share.png",
+        'img_type' => 'image/png',
       ],
       'preloads' => [
         'imgs' => [
@@ -61,7 +67,13 @@
       'description' => "We take a conscious approach to every project and always immerse ourselves deeply in the client's business and work hard to achieve the result.",
       'scripts' => [],
       'styles' => [
-        'works' =>  '1.0.0',
+        'works',
+      ],
+      'og' => [
+        'type' => 'website',
+        'url' => "$site_url/works",
+        'img' => "$site_url/assets/img/main-share.png",
+        'img_type' => 'image/png',
       ],
     ],
 
@@ -70,9 +82,14 @@
       'description' => 'We created a modern landing page to present the new FUENF collection.',
       'scripts' => [],
       'styles' => [
-        'case' =>  '1.0.0',
-        'fuenf' =>  '1.0.0'
-      ]
+        'case',
+      ],
+      'og' => [
+        'type' => 'article',
+        'url' => "$site_url/cases/fuenf",
+        'img' => "$site_url/assets/img/cases/fuenf/preview.jpg",
+        'img_type' => 'image/jpeg',
+      ],
     ],
 
     'manifest' => [
@@ -80,7 +97,13 @@
       'description' => "We created a stylish women's digital magazine. Transformed the Instagram account into a large digital resource with well-thought-out section navigation.",
       'scripts' => [],
       'styles' => [
-        'case' =>  '1.0.0',
+        'case',
+      ],
+      'og' => [
+        'type' => 'article',
+        'url' => "$site_url/cases/manifest",
+        'img' => "$site_url/assets/img/cases/manifest/preview.jpg",
+        'img_type' => 'image/jpeg',
       ],
     ],
 
@@ -89,7 +112,13 @@
       'description' => "We have created a unique design and developed a functional online store for marketplace for author's gifts.",
       'scripts' => [],
       'styles' => [
-        'case' =>  '1.0.0',
+        'case',
+      ],
+      'og' => [
+        'type' => 'article',
+        'url' => "$site_url/cases/gingerjoys",
+        'img' => "$site_url/assets/img/cases/gingerjoys/preview.jpg",
+        'img_type' => 'image/jpeg',
       ],
     ],
 
@@ -98,7 +127,13 @@
       'description' => "We created a brand identity for a beauty salons chain and based on it we developed a redesign of their website.",
       'scripts' => [],
       'styles' => [
-        'case' =>  '1.0.0',
+        'case',
+      ],
+      'og' => [
+        'type' => 'article',
+        'url' => "$site_url/cases/orange",
+        'img' => "$site_url/assets/img/cases/orange/preview.jpg",
+        'img_type' => 'image/jpeg',
       ],
     ],
 
@@ -107,7 +142,13 @@
       'description' => "We created a concise modern corporate website for an international design agency.",
       'scripts' => [],
       'styles' => [
-        'case' =>  '1.0.0',
+        'case',
+      ],
+      'og' => [
+        'type' => 'article',
+        'url' => "$site_url/cases/bits",
+        'img' => "$site_url/assets/img/cases/bits/preview.jpg",
+        'img_type' => 'image/jpeg',
       ],
     ],
 
@@ -116,7 +157,13 @@
       'description' => "We made a web application that forms an individual nutrition and training plan, taking into account all user’s preferences and restrictions. ",
       'scripts' => [],
       'styles' => [
-        'case' =>  '1.0.0',
+        'case',
+      ],
+      'og' => [
+        'type' => 'article',
+        'url' => "$site_url/cases/profitnes",
+        'img' => "$site_url/assets/img/cases/profitnes/preview.jpg",
+        'img_type' => 'image/jpeg',
       ],
     ],
   ];
