@@ -9,6 +9,7 @@
  * @param string $args['name'] название файла
  * @param string $args['alt'] 
  * @param string $args['decode'] default async [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Img#attr-decoding]
+ * @param boolean $args['lazy']
  */
 
 function get_picture_tag($args) {
@@ -16,15 +17,21 @@ function get_picture_tag($args) {
     'class'  => '',
     'decode' => 'async',
     'alt' => '',
+    'lazy' => true,
   ];
 
   $_args = array_merge($default_args, $args);
-
-  $class = $_args['class'] === '' ? '' : 'class="' . $_args['class'] . '"'; 
-  $decoding = $_args['decode'];
-  $alt = $_args['alt'];
-  $path = $_args['path'];
+  
   $name = $_args['name'];
+  $path = $_args['path'];
+  $alt = $_args['alt'];
+  $decoding = $_args['decode'];
+
+  $class = $_args['class'] === '' 
+    ? '' 
+    : 'class="' . $_args['class'] . '"';  
+
+  $lazy = $_args['lazy'] ? ' loading="lazy"' : ''; 
 
   $src = $path . $name;
 
@@ -41,7 +48,7 @@ function get_picture_tag($args) {
 
       <source media="(max-width: 767.98px)" srcset="$src-xs.webp" type="image/webp">
       <source media="(max-width: 767.98px)" srcset="$src-xs.jpg" type="image/jpeg">
-      <img loading="lazy" src="$src-lg.jpg" alt="$alt" decoding="$decoding">
+      <img $lazy src="$src-lg.jpg" alt="$alt" decoding="$decoding">
     </picture>
   EOL;
 
