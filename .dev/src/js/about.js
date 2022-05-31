@@ -1,32 +1,35 @@
-(function() {
-  let isCounterStarted = false
-  const counterList = document.querySelector('.about-us__list')
-  const counters = document.querySelectorAll('.js-num-grow')
+(function () {
+  const counterList = document.querySelector('.about-us__list');
 
-  window.addEventListener('scroll', () => {
-    if (isCounterStarted) return
-    if (isInViewport(counterList)) {
-      isCounterStarted = true
-      startCounter()
-    }
-  })
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        startCounter();
+        observer.unobserve(entry.target);
+      }
+    });
+  });
+
+  observer.observe(counterList);
 
   function startCounter() {
-    counters.forEach(counter => {
-      growNumber(counter)
-    })
+    const counters = document.querySelectorAll('.js-num-grow');
+
+    counters.forEach((counter) => {
+      growNumber(counter);
+    });
   }
 
   function growNumber(el, speed = 50) {
-    const endNumber = +el.getAttribute('number')
+    const endNumber = +el.getAttribute('number');
 
     const interval = setInterval(() => {
-      const currNumber = +el.innerText
+      const currNumber = +el.innerText;
 
       if (currNumber < endNumber) {
-        el.innerText = currNumber + 1       
+        el.innerText = currNumber + 1;
       } else {
-        clearInterval(interval)
+        clearInterval(interval);
       }
     }, speed);
   }
