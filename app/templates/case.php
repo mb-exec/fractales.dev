@@ -11,6 +11,7 @@
         'name'  => $case['hdr_img']['name'],
         'path'  => $case['imgs_folder'],
         'alt'   => $case['hdr_img']['alt'],
+        'lazy'  => false,
       ]);
     ?>
     <div class="container">
@@ -29,7 +30,7 @@
 
           <div class="info__lists text-ls">
             <div class="tools">
-              <h3 class="tools__title">Services</h3>
+              <strong class="tools__title">Services</strong>
               <ul class="tools__list">
                 <?php foreach ( $case['services'] as $service ) : ?>
                   <li class="tools__list-item"><?php echo $service ?></li>
@@ -38,7 +39,7 @@
             </div>
 
             <div class="tools">
-              <h3 class="tools__title">Technology</h3>
+              <strong class="tools__title">Technology</strong>
               <ul class="tools__list">
                 <?php foreach ( $case['technology'] as $tech ) : ?>
                   <li class="tools__list-item"><?php echo $tech ?></li>

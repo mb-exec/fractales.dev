@@ -25,13 +25,17 @@
     ];
 
     foreach ( $fonts as $font ) : ?>
-    <link rel="preload" href="<?php echo "$site_url/assets/fonts/$font.woff" ?>" as="font" type="font/woff" crossorigin/>
+    <link rel="preload" href="<?php echo "$site_url/assets/fonts/$font.woff" ?>" as="font" type="font/woff" crossorigin="anonymous"/>
   <?php endforeach ?>
 
   <?php 
     // images
     echo get_img_preload("$site_url/assets/img/logo.svg");
     echo get_img_preload("$site_url/assets/img/icons/burger.svg");
+
+    foreach ($page['preloads']['imgs'] as $preload_img) {
+      echo get_img_preload($preload_img);
+    } 
 
     // styles
     foreach ( $pages['global']['styles'] as $style_name => $ver ) {
@@ -44,7 +48,7 @@
   ?>    
   <!-- PRELOAD -->
 
-  <!-- STYLES & SCRIPTS -->
+  <!-- STYLES & SCRIPTS -->  
   <?php 
     // styles
       foreach ( $pages['global']['styles'] as $style_name => $ver ) {
@@ -54,7 +58,10 @@
       foreach ( $page['styles'] as $style_name => $ver ) {
         echo get_style_link(['name' => $style_name]);
       }
+  ?>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=fetch%2CIntersectionObserver%2CIntersectionObserverEntry"></script>
+  <?php
     // scripts
     foreach ( $pages['global']['scripts'] as $script_name ) {
       echo get_script_link(['name' => $script_name]);
@@ -63,7 +70,7 @@
     foreach ( $page['scripts'] as $script_name ) {
       echo get_script_link(['name' => $script_name]);
     } 
-  ?>
+  ?>  
   <!-- STYLES & SCRIPTS -->
   <!-- FAV -->
   <link rel="apple-touch-icon" sizes="180x180" href="<?php echo $site_url ?>/fav/apple-touch-icon.png">

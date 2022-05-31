@@ -1,4 +1,7 @@
 <?php
+  $site_url = get_site_url();
+  $webp_or_jpeg = $webp_support ? 'webp' : 'jpg';
+
   $pages = [
     // скрипты и стили для всех страниц
     'global' => [
@@ -40,9 +43,15 @@
         'about' =>  '1.0.0',
       ],
       'preloads' => [
-        [
-          'as' => '',
-          'href' => ''
+        'imgs' => [
+          [
+            'href' => "$site_url/assets/img/about-page/hero-lg.$webp_or_jpeg",
+            'media_query' => '(min-width: 767.98px)',
+          ],
+          [
+            'href' => "$site_url/assets/img/about-page/hero-xs.$webp_or_jpeg",
+            'media_query' => '(max-width: 767.98px)',
+          ]
         ]
       ]
     ],
@@ -110,5 +119,31 @@
         'case' =>  '1.0.0',
       ],
     ],
-  ]
+  ];
+
+  /**
+   * Названия для главных картинок у каждого кейса 'hdr', 
+   * добавляем прелоад для всех кейсов, чтобы не писать отдельно у каждого
+   */
+  foreach (
+    ['fuenf', 'manifest', 'gingerjoys', 'orange', 'bits', 'profitnes'] as $case_name) {
+    $pages[$case_name]['preloads']['imgs'] = [
+      [
+        'href' => "$site_url/assets/img/cases/$case_name/hdr-xs.$webp_or_jpeg",
+        'media_query' => '(max-width: 767.98px)',
+      ],
+      [
+        'href' => "$site_url/assets/img/cases/$case_name/hdr-sm.$webp_or_jpeg",
+        'media_query' => '(min-width: 767.98px) and (max-width: 1023.98px)',
+      ],
+      [
+        'href' => "$site_url/assets/img/cases/$case_name/hdr-md.$webp_or_jpeg",
+        'media_query' => '(min-width: 1023.98px) and (max-width: 1279.98px)',
+      ],
+      [
+        'href' => "$site_url/assets/img/cases/$case_name/hdr-lg.$webp_or_jpeg",
+        'media_query' => '(min-width: 1279.98px)',
+      ],
+    ];
+  }
 ?>
