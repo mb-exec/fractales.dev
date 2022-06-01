@@ -6,10 +6,16 @@ const destPath = IS_PROD ? '../.build/assets/' : '../assets/'
 
 const { src, dest, watch, series, parallel, lastRun } = require('gulp');
 
+const stream = require('stream');
 const del = require('del');
 const browserSync = require('browser-sync').create();
 const combine = require('stream-combiner2').obj;
 const gulpIf = require('gulp-if');
+const hash = require('gulp-hash-filename');
+
+const HASH_OPTIONS = {
+  format: '{name}-{hash:5}{size}{ext}'
+}
 
 // css libs
 const sass = require('gulp-sass')(require('sass'));
@@ -23,6 +29,7 @@ const uglify = require('gulp-uglify-es').default;
 // fonts/imgs libs 
 const ttfToWoff = require("gulp-ttf-to-woff");
 const webp = require('gulp-webp');
+const { Stream } = require('stream');
 
 function styles() {
   // return src('./src/scss/*.scss', {since: lastRun(styles)})
@@ -30,7 +37,8 @@ function styles() {
     .pipe(sass())
     .pipe(gulpIf(IS_PROD, combine(
       gcmq(),
-      csso()
+      csso(),
+      hash(HASH_OPTIONS)
     )))
     .pipe(dest(destPath + 'css'))
 }
@@ -39,7 +47,10 @@ function scripts() {
   // return src(['./src/js/*.js', './src/js/vendor/*.js'], {since: lastRun(scripts)})
   return src(['./src/js/*.js', './src/js/vendor/*.js'])
     .pipe(include())
-    .pipe(gulpIf(IS_PROD, uglify()))
+    .pipe(gulpIf(IS_PROD, combine(
+      uglify(),      
+      hash(HASH_OPTIONS)
+    )))
     .pipe(dest(destPath + 'js'))
 }
 
@@ -77,7 +88,7 @@ function serve() {
 }
 
 function clean() {
-  const path = IS_PROD ? '../.build/' : '../assets/'
+  const path = IS_PROD ? '../.build/' : ['../assets/', '!../assets/img']
   return del(path + '*/', {force: true})
 }
 
