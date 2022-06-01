@@ -27,7 +27,7 @@ function get_member_card($member, $class = '', $animation = false, $tag = 'li') 
         <img loading="lazy" src="$photo.jpg" alt="$name photo" class="member__img">
       </picture>
 
-      <h4 class="member__name">$name</h4>
+      <span class="member__name">$name</span>
       <p class="member__position">$position</p>
     </$tag>
   EOL;

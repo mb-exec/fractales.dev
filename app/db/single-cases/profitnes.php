@@ -29,7 +29,7 @@
       [
         'name' => 'ABOUT PROJECT',
         'title' => '',
-        'text' => "ProFitnessLife is a weekly healthy body course. Target audience – girls and women who want to lose weight or maintain their current weight. They do not want to search for information on their own and are ready to trust experienced instructors.",
+        'text' => "ProFitnessLife is a weekly healthy body course. Target audience are girls and women who want to lose weight or maintain their current weight. They do not want to search for information on their own and are ready to trust experienced instructors.",
 
         'img_name' => 'about',
         'img_alt' => 'Site preview on mobile'

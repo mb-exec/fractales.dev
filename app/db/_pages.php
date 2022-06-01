@@ -40,6 +40,13 @@
       ]
     ],
 
+    'policy' => [
+      'title' => 'Policy',
+      'styles' => [
+        'policy'
+      ]
+    ],
+
     'about' => [
       'title' => 'Our team of specialists | fractales dev',
       'description' => 'We believe that the team is the most valuable asset in any business. Each of us is a professional in his field. This helps to separate tasks and work efficiently.',
@@ -173,6 +180,21 @@
         'img_type' => 'image/jpeg',
       ],
     ],
+
+    'imperator' => [
+      'title' => 'Antique salon IMPERATOR GALLERY | fractales dev',
+      'description' => "We developed an eCommerce landing page that conveys the atmosphere of the gallery and the exclusivity of the items.",
+      'scripts' => [],
+      'styles' => [
+        'case',
+      ],
+      'og' => [
+        'type' => 'article',
+        'url' => "$site_url/cases/imperator",
+        'img' => "$site_url/assets/img/cases/imperator/preview.jpg",
+        'img_type' => 'image/jpeg',
+      ],
+    ],
   ];
 
   /**
@@ -180,7 +202,7 @@
    * добавляем прелоад для всех кейсов, чтобы не писать отдельно у каждого
    */
   foreach (
-    ['fuenf', 'manifest', 'gingerjoys', 'orange', 'bits', 'profitnes'] as $case_name) {
+    ['fuenf', 'manifest', 'gingerjoys', 'orange', 'bits', 'profitnes', 'imperator-gallery'] as $case_name) {
     $pages[$case_name]['preloads']['imgs'] = [
       [
         'href' => "$site_url/assets/img/cases/$case_name/hdr-xs.$webp_or_jpeg",
