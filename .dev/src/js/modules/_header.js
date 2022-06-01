@@ -2,31 +2,15 @@
   const hdr = document.querySelector('.hdr');
   const hdrHeight = parseInt(window.getComputedStyle(hdr).height);
 
+  hdrScroll();
   mobileMenu(hdrHeight);
-  hdrScroll(hdrHeight);
 
-  function hdrScroll(hdrHeight) {
+  function hdrScroll() {
     const navLinks = document.querySelectorAll('.hdr__menu .nav__link')
 
     let prevScrollYPosition = 0;
 
-    window.addEventListener('scroll', e => {
-      const isScrollDown = window.scrollY > prevScrollYPosition;
-
-      if (window.scrollY <= hdrHeight) {
-        hdr.classList.remove('on-scroll')
-      } else {
-        hdr.classList.add('on-scroll')
-      }
-
-      if (isScrollDown && window.scrollY > hdrHeight) {
-        hdr.classList.add('scroll-down');
-      } else if (!isScrollDown) {
-        hdr.classList.remove('scroll-down');
-      }
-
-      prevScrollYPosition = window.scrollY;
-    });
+    window.addEventListener('scroll', scrollHandler, supportsPassive ? { passive: true } : false)
 
     navLinks.forEach(link => {
       link.addEventListener('click', e => {
@@ -38,6 +22,24 @@
         }
       })
     })
+
+    function scrollHandler() {      
+      const isScrollDown = window.scrollY > prevScrollYPosition;
+
+      if (window.scrollY <= 10) {
+        hdr.classList.remove('on-scroll')
+      } else {
+        hdr.classList.add('on-scroll')
+      }
+
+      if (isScrollDown && window.scrollY > 10) {
+        hdr.classList.add('scroll-down');
+      } else if (!isScrollDown) {
+        hdr.classList.remove('scroll-down');
+      }
+
+      prevScrollYPosition = window.scrollY;
+    }    
   }
 
   function mobileMenu(hdrHeight) {
