@@ -1,9 +1,7 @@
 # Разработка
 
 ## Инициализация
-Создать папку на сервере и в ней использовать
-
-<mark>Зависит от github</mark>
+Создать папку на сервере *(OpenServer, Mamp)* и в ней использовать
 ```
 git init
 git pull https://github.com/mb-exec/fractales.dev.git
@@ -17,7 +15,8 @@ git remote add origin git@github.com:mb-exec/fractales.dev.git
 // const SERVER_BASE_URL = 'http://'
 const SERVER_BASE_URL = 'http://localhost:8888'
 ```
-Так же при изменении гитхаба заменить:
+Так же при изменении гитхаба заменить.
+Необходимо для `npm run deploy`
 
 ```js
 const GITHUB_URL
@@ -74,8 +73,14 @@ npm run deploy
         'description' => '',
         'scripts' => [],
         'styles' => [
-          'case' =>  '1.0.0', // стили для стандартного кейса
+          'case' // стили для стандартного кейса
         ],
+        'og' => [  // настройки для Open Graph
+          'type' => 'website',
+          'url' => "$site_url/%name%",
+          'img' => "$site_url/assets/img/%pic%.png",
+          'img_type' => 'image/png',
+        ]
       ],
     ]
 

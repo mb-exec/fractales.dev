@@ -1,6 +1,7 @@
 .dev/node_modules
 .build
 .tmp
+.idea
 assets
 uploads/*
 
