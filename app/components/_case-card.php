@@ -24,7 +24,7 @@ function get_case_card($case, $index = 0, $animation = true, $tag = 'li') {
         <span class="frame-hover__top"></span>
         <span class="frame-hover__bottom"></span>
         <div class="case-preview__pic">
-          <img loading="lazy" src="$imgs_folder/preview.$img_ext" alt="$img_alt" class="case-preview__img">
+          <img loading="lazy" src="{$imgs_folder}preview.$img_ext" alt="$img_alt" class="case-preview__img">
         </div>
 
         <div class="case-preview__descr text-ls">
