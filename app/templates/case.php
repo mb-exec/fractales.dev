@@ -8,9 +8,10 @@
     <?php
       echo get_picture_tag([
         'class' => 'case-hdr__pic pic',
-        'name'  => $case['imgs']['header']['name'],
+        'name'  => $case['hdr_img']['name'],
         'path'  => $case['imgs_folder'],
-        'alt'   => 'Site preview on laptop',
+        'alt'   => $case['hdr_img']['alt'],
+        'lazy'  => false,
       ]);
     ?>
     <div class="container">
@@ -22,14 +23,14 @@
     <div class="container">
 
       <div class="sect--columns__inner">
-        <h2 class="info__title sect--columns__inner-title text-ls"><?php echo $case['tag'] ?></h2>
+        <span class="info__title sect--columns__inner-title text-ls"><?php echo $case['tag'] ?></span>
 
         <div class="sect--columns__inner-content text-ls">
           <p><?php echo $case['descr'] ?></p>
 
           <div class="info__lists text-ls">
             <div class="tools">
-              <h3 class="tools__title">Services</h3>
+              <strong class="tools__title">Services</strong>
               <ul class="tools__list">
                 <?php foreach ( $case['services'] as $service ) : ?>
                   <li class="tools__list-item"><?php echo $service ?></li>
@@ -38,7 +39,7 @@
             </div>
 
             <div class="tools">
-              <h3 class="tools__title">Technology</h3>
+              <strong class="tools__title">Technology</strong>
               <ul class="tools__list">
                 <?php foreach ( $case['technology'] as $tech ) : ?>
                   <li class="tools__list-item"><?php echo $tech ?></li>
@@ -52,85 +53,45 @@
     </div>
   </section>
 
-  <section class="about sect sect--columns">
-    <div class="container">
+  <?php foreach ( $case['sections'] as $section ) : 
+      $name = $section['name'];
+      $hasTitle = isset($section['title']) && !empty($section['title']);
+      $sectionNameTag = $hasTitle ? 'span': 'h2';
 
-      <div class="sect--columns__inner">
-        <h2 class="case__sect-title sect--columns__inner-title">ABOUT PROJECT</h2>
-
-        <div class="sect--columns__inner-content text-ls">
-          <p><?php echo $case['about'] ?></p>
-        </div>
-      </div>
-      
-    </div>
-
-    <?php
-      echo get_picture_tag([
-        'class' => 'pic',
-        'name'  => $case['imgs']['about']['name'],
-        'path'  => $case['imgs_folder'],
-        'alt'   => $case['imgs']['about']['alt'],
-      ]);
-    ?>
-  </section>
-
-  <?php if (isset($case['design'])) : ?>
-  <section class="sect sect--columns">
-    <div class="container">
-
-      <div class="sect--columns__inner">
-        <h2 class="case__sect-title sect--columns__inner-title">DESIGN</h2>
-
-        <div class="sect--columns__inner-content text-ls">
-          <p class="case__text-content">
-            <strong><?php echo $case['design']['strong'] ?></strong>
-            <?php echo $case['design']['text'] ?>
-          </p>
-
-        </div>
-      </div>
-      
-    </div>
-
-    <?php
-      echo get_picture_tag([
-        'class' => 'pic',
-        'name' => $case['imgs']['design']['name'],
-        'path' => $case['imgs_folder'],
-      ]);
-    ?>
-  </section>
-  <?php endif ?>
-
-  <?php foreach ( $case['sections'] as $section ) : ?>
-
-  <section class="sect sect--columns">
-    <div class="container">
-
-      <div class="sect--columns__inner">
-        <h2 class="case__sect-title sect--columns__inner-title"><?php echo $section['title'] ?></h2>
-
-        <div class="sect--columns__inner-content text-ls">
-          <p class="case__text-content">
-            <strong><?php echo $section['strong'] ?></strong>
-            <?php echo $section['text'] ?> 
-          </p>
-        </div>
-      </div>
-      
-    </div>
-
-    <?php
-      echo get_picture_tag([
-        'class' => 'pic',
-        'name' => $section['img_name'],
-        'path' => $case['imgs_folder'],
-        'alt' => $section['img_alt'],
-      ]);
+      $sectionName = <<<EOL
+        <$sectionNameTag class="case__sect-title sect--columns__inner-title">$name</$sectionNameTag>
+      EOL;
     ?>
 
-  </section>
+    <section class="sect sect--columns">
+      <div class="container">
+
+        <div class="sect--columns__inner">
+          <?php echo $sectionName ?>
+
+          <div class="sect--columns__inner-content text-ls">
+            
+            <?php if ($hasTitle) : ?>
+              <h2 class="case__text-title"><?php echo $section['title'] ?></h2>
+            <?php endif ?>
+
+            <p class="case__text-content">
+              <?php echo $section['text'] ?> 
+            </p>
+          </div>
+        </div>
+        
+      </div>
+
+      <?php
+        echo get_picture_tag([
+          'class' => 'pic',
+          'name' => $section['img_name'],
+          'path' => $case['imgs_folder'],
+          'alt' => $section['img_alt'],
+        ]);
+      ?>
+    </section>
 
   <?php endforeach ?>
 

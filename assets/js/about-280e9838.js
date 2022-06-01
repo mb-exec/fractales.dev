@@ -1,0 +1,1 @@
+!function(){const e=document.querySelector(".about-us__list");new IntersectionObserver(((e,t)=>{e.forEach((e=>{e.isIntersecting&&(document.querySelectorAll(".js-num-grow").forEach((e=>{!function(e,t=50){const n=+e.getAttribute("number"),r=setInterval((()=>{const t=+e.innerText;t<n?e.innerText=t+1:clearInterval(r)}),t)}(e)})),t.unobserve(e.target))}))})).observe(e)}();

@@ -1,1 +1,0 @@
-!function(){let e=!1;const t=document.querySelector(".about-us__list"),n=document.querySelectorAll(".js-num-grow");window.addEventListener("scroll",(()=>{e||isInViewport(t)&&(e=!0,n.forEach((e=>{!function(e,t=50){const n=+e.getAttribute("number"),r=setInterval((()=>{const t=+e.innerText;t<n?e.innerText=t+1:clearInterval(r)}),t)}(e)})))}))}();

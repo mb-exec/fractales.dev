@@ -46,6 +46,7 @@ try {
   $mail->setFrom('test@boak.ru', 'test@boak.ru');
 
   $mail->addAddress('vadim@media-bay.ru');  
+  $mail->addAddress('hello@fractales.dev');  
 
   if (!empty($_FILES['file']['name'][0])) {
     $file      = $_FILES['file'];

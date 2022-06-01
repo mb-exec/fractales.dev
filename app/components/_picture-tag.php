@@ -9,38 +9,47 @@
  * @param string $args['name'] название файла
  * @param string $args['alt'] 
  * @param string $args['decode'] default async [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Img#attr-decoding]
+ * @param boolean $args['lazy']
  */
 
 function get_picture_tag($args) {
+  global $webp_support;
+
   $default_args = [
     'class'  => '',
     'decode' => 'async',
     'alt' => '',
+    'lazy' => true,
   ];
 
   $_args = array_merge($default_args, $args);
-
-  $class = $_args['class'] === '' ? '' : 'class="' . $_args['class'] . '"'; 
-  $decoding = $_args['decode'];
-  $alt = $_args['alt'];
-  $path = $_args['path'];
+  
   $name = $_args['name'];
+  $path = $_args['path'];
+  $alt = $_args['alt'];
+  $decoding = $_args['decode'];
+
+  $class = $_args['class'] === '' 
+    ? '' 
+    : 'class="' . $_args['class'] . '"';  
+
+  $lazy = $_args['lazy'] ? ' loading="lazy"' : ''; 
 
   $src = $path . $name;
 
+  $file_ext = $webp_support ? 'webp' : 'jpg';
+  $img_type = $webp_support ? 'webp' : 'jpeg';
+
   $html = <<<EOL
     <picture $class>
-      <source media="(min-width: 1279.98px)" srcset="$src-lg.webp" type="image/webp">
-      <source media="(min-width: 1279.98px)" srcset="$src-lg.jpg" type="image/jpeg">
+      <source media="(min-width: 1279.98px)" srcset="$src-lg.$file_ext" type="image/$img_type">
 
-      <source media="(min-width: 1023.98px)" srcset="$src-md.webp" type="image/webp">
-      <source media="(min-width: 1023.98px)" srcset="$src-md.jpg" type="image/jpeg">
+      <source media="(min-width: 1023.98px)" srcset="$src-md.$file_ext" type="image/$img_type">
 
-      <source media="(min-width: 767.98px)" srcset="$src-sm.webp" type="image/webp">
-      <source media="(min-width: 767.98px)" srcset="$src-sm.jpg" type="image/jpeg">
+      <source media="(min-width: 767.98px)" srcset="$src-sm.$file_ext" type="image/$img_type">
 
-      <source media="(max-width: 767.98px)" srcset="$src-xs.webp" type="image/webp">
-      <img loading="lazy" src="$src-xs.jpg" alt="$alt" decoding="$decoding">
+      <source media="(max-width: 767.98px)" srcset="$src-xs.$file_ext" type="image/$img_type">
+      <img $lazy src="$src-lg.$file_ext" alt="$alt" decoding="$decoding">
     </picture>
   EOL;
 

@@ -9,6 +9,10 @@
     'page_link' => $site_url . '/cases/%name%',
 
     // для секции с основной информацией
+    'hdr_img' => [
+      'name' => 'hdr',
+      'alt' => '',
+    ],
     'descr' => '',
 
     'services' => [
@@ -21,36 +25,6 @@
       'WordPress',
     ],
 
-    // секция about
-    'about' => '',
-
-    // секция design
-    'design' => [
-      'strong' => '', // тег <strong></strong> вместо заголовка
-      'text' => ""
-    ],
-
-    /**
-     * изображения для стандартных секций
-     * выводится через функцию get_picture_tag()
-     * поля header \ about \ design используются в шаблоне, далее можно добавлять свои
-     * так же необходимо называть и изображения для первых трех секции 
-     */
-    'imgs' => [
-      'header' => [ 
-        'name' => 'hdr', // префикс для изображения hdr-{xs, sm, md, lg}.jpg и 
-        'alt' => 'Site preview on laptop'
-      ],
-      'about' => [
-        'name' => 'about',
-        'alt' => 'Site preview on mobile'
-      ],
-      'design' => [
-        'name' => 'design',
-        'alt' => ''
-      ]
-    ],
-
     /**
      * остальные секции
      * стандартный шаблон для секции, который состоит из заголовка блока 'title', 'strong' - сам заголовок
@@ -58,21 +32,13 @@
     */
     'sections' => [
       [
-        'title' => 'PRODUCT CARD',
-        'strong' => 'Detailed product description and size guide',
+        'name' => 'PRODUCT CARD',
+        'title' => 'Detailed product description and size guide',
         'text' => "The singularity and modernity of education are concentrated with the help of animation, non-standard grid and graphic elements. Running lines with the brand name complement the overall style and contribute to the formation of the brand image. Large photos allow you to see the clothes in the smallest detail.",
 
-        'img_name' => 'product-card',
+        'img_name' => 'product-card', // <- название изображения `product-card.jpg`
         'img_alt' => ''
       ],
-      [
-        'title' => 'PURCHASE',
-        'strong' => 'Focus on ease of ordering',
-        'text' => "Despite the fact that we made a landing, it works like a full-fledged online store - you can select a product, view it from all sides and order.<br><br>You can pay for the goods through PayPal or immediately with a bank card using the Stripe service. We connected both payment methods using the API.",
-
-        'img_name' => 'purchase',
-        'img_alt' => ''
-      ]
     ],
 
     /**

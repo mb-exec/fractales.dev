@@ -1,7 +1,7 @@
 <?php
   $services = [
     [
-      'title' => 'Websites development',
+      'title' => 'Web Development',
       'descr' => 'We provide solutions ranging from development of the front end user experience to the back end API connections and application builds.',
       'list' => [
         'Websites',

@@ -1,35 +1,77 @@
 <?php require dirname(__DIR__, 2) . '/app/functions.php' ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" <?php echo isset($page['og']) ? 'prefix="og: http://ogp.me/ns#"' : '' ?>>
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no, viewport-fit=cover">
-
-  <meta name="description" content="<?php echo $page['description'] ?>">
-
   <title><?php echo $page['title'] ?></title>
 
+  <?php if(!empty($page['description'])) : ?>
+    <meta name="description" content="<?php echo $page['description'] ?>">
+  <?php endif ?>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=2.0">
+  <meta name="HandheldFriendly" content="True"/>
+
+  <!-- PRELOAD -->
+  <?php
+    $fonts = [
+      'Heebo-Regular',
+      'Panchang-Medium',
+      'Panchang-Semibold',
+      'Poppins-Regular',
+      'Poppins-Medium',
+    ];
+
+    foreach ( $fonts as $font ) : ?>
+    <link rel="preload" href="<?php echo "$site_url/assets/fonts/$font.woff" ?>" as="font" type="font/woff" crossorigin="anonymous"/>
+  <?php endforeach ?>
+
+  <?php 
+    // images
+    echo get_img_preload("$site_url/assets/img/logo.svg");
+    echo get_img_preload("$site_url/assets/img/icons/burger.svg");
+
+    foreach ($page['preloads']['imgs'] as $preload_img) {
+      echo get_img_preload($preload_img);
+    } 
+
+    // styles
+    foreach ( $pages['global']['styles'] as $style_name ) {
+      echo get_style_link(['name' => $style_name, 'preload' => true]);
+    }
+
+    foreach ( $page['styles'] as $style_name ) {
+      echo get_style_link(['name' => $style_name, 'preload' => true]);
+    }
+  ?>    
+  <!-- PRELOAD -->
+
+  <!-- STYLES & SCRIPTS -->  
   <?php 
     // styles
-      foreach ( $pages['global']['styles'] as $style_name => $ver ) {
-        echo get_style_link($style_name);
+      foreach ( $pages['global']['styles'] as $style_name ) {
+        echo get_style_link(['name' => $style_name]);
       }
 
-      foreach ( $page['styles'] as $style_name => $ver ) {
-        echo get_style_link($style_name);
+      foreach ( $page['styles'] as $style_name ) {
+        echo get_style_link(['name' => $style_name]);
       }
+  ?>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=fetch%2CIntersectionObserver%2CIntersectionObserverEntry"></script>
+  <?php
     // scripts
-    foreach ( $pages['global']['scripts'] as $script_name => $ver ) {
-      echo get_script_link($script_name, $ver);
+    foreach ( $pages['global']['scripts'] as $script_name ) {
+      echo get_script_link(['name' => $script_name]);
     }  
 
-    foreach ( $page['scripts'] as $script_name => $ver ) {
-      echo get_script_link($script_name, $ver);
+    foreach ( $page['scripts'] as $script_name ) {
+      echo get_script_link(['name' => $script_name]);
     } 
-  ?>
+  ?>  
+  <!-- STYLES & SCRIPTS -->
   <!-- FAV -->
   <link rel="apple-touch-icon" sizes="180x180" href="<?php echo $site_url ?>/fav/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="<?php echo $site_url ?>/fav/favicon-32x32.png">
@@ -39,6 +81,15 @@
   <meta name="msapplication-TileColor" content="#ff7842">
   <meta name="theme-color" content="#ffffff">
   <!-- FAV -->
+
+  <?php if (isset($page['og'])) : ?>
+    <meta property="og:title" content="<?php echo $page['title'] ?>">
+    <meta property="og:description" content="<?php echo $page['description'] ?>"/>
+    <meta property="og:type" content="<?php echo $page['og']['type'] ?>"/>
+    <meta property="og:image" content="<?php echo $page['og']['img'] ?>"/>
+    <meta property="og:image:type" content="<?php echo $page['og']['img_type'] ?>" />
+    <meta property="og:url" content= "<?php echo $page['og']['url'] ?>"/>
+  <?php endif ?>
 </head>
 
 <body>

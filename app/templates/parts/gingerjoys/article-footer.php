@@ -2,7 +2,7 @@
   <?php
     echo get_picture_tag([
       'class' => 'pic',
-      'name' => $case['imgs']['preresult']['name'],
+      'name' => 'preresult',
       'path' => $case['imgs_folder'],
     ]);
   ?>
