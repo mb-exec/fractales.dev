@@ -33,6 +33,13 @@
       ]
     ],
 
+    '404' => [
+      'title' => '404 not found',
+      'styles' => [
+        'error-page'
+      ]
+    ],
+
     'about' => [
       'title' => 'Our team of specialists | fractales dev',
       'description' => 'We believe that the team is the most valuable asset in any business. Each of us is a professional in his field. This helps to separate tasks and work efficiently.',

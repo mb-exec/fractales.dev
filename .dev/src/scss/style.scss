@@ -7,12 +7,16 @@
 @import './common/animations';
 
 @import './components/contacts';
+@import './components/cookie-popup';
 
 body {
   background-color: $--color-page-bg;
   font-family: $--font-primary;
   line-height: 1.5;
   color: $--color-black;
+  overflow-x: hidden;
+  display: flex;
+  flex-flow: column;
 
   &.no-scroll {
     overflow: hidden;
@@ -20,7 +24,6 @@ body {
 }
 
 .main {
-  overflow: hidden;
   padding-top: 66px;
 }
 
@@ -118,14 +121,14 @@ body {
 
     &::before {
       background-color: $--color-secondary;
-      right: -20px;
-      top: 60px;
+      right: 40px;
+      top: 80px;
     }
 
     &::after {
       background-color: $--color-primary;
-      right: 45px;
-      top: 80px;
+      right: 105px;
+      top: 120px;
     }
 
     &.open {
@@ -183,6 +186,8 @@ body {
 }
 
 .ftr {
+  margin-top: auto;
+  
   &__inner {
     padding: 20px 0 30px;
     display: flex;
@@ -230,6 +235,9 @@ body {
   }
 
   &__bottom {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
     color: $--color-gray;
   }
 

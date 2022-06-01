@@ -82,9 +82,9 @@
   <meta name="theme-color" content="#ffffff">
   <!-- FAV -->
 
-  <meta property="og:title" content="<?php echo $page['title'] ?>">
-  <meta property="og:description" content="<?php echo $page['description'] ?>"/>
   <?php if (isset($page['og'])) : ?>
+    <meta property="og:title" content="<?php echo $page['title'] ?>">
+    <meta property="og:description" content="<?php echo $page['description'] ?>"/>
     <meta property="og:type" content="<?php echo $page['og']['type'] ?>"/>
     <meta property="og:image" content="<?php echo $page['og']['img'] ?>"/>
     <meta property="og:image:type" content="<?php echo $page['og']['img_type'] ?>" />

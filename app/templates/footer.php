@@ -1,4 +1,9 @@
-<?php require __ROOT__ . '/app/templates/parts/contacts.php' ?>
+<?php 
+  $exclude_contacts_for_pages = ['policy', '404'];
+  if (!in_array($curr_page_name, $exclude_contacts_for_pages)) {
+    require __ROOT__ . '/app/templates/parts/contacts.php';
+  }
+?>
 </main>
   
   <footer class="ftr text-ls">
@@ -28,11 +33,15 @@
         </ul>
 
         <div class="ftr__bottom">
-          <a href="<?php echo $site_url ?>/policy.pdf" class="ftr__policy">privacy policy</a>
+          <a href="<?php echo $site_url ?>/policy" class="ftr__policy">privacy policy</a>
           <p class="ftr__rights">© fractales development, <?php echo getdate()['year'] ?> All rights reserved</p>
         </div>
       </div>
     </div>
   </footer>
+
+  <?php
+    // require __ROOT__ . '/app/templates/parts/cookie-popup.php';
+  ?>
 </body>
 </html>
