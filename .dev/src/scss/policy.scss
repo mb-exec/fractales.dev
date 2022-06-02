@@ -1,0 +1,46 @@
+@import './assets/variables';
+
+.policy {
+  margin-top: 60px;
+
+  h1, h2, h3, h4 {
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 32px;
+    margin-bottom: 60px;
+  }
+
+  h2 {
+    margin-bottom: 50px 0;
+    font-size: 28px;
+  }
+
+  h3, h4 {
+    font-size: 24px;
+    margin: 40px 0;
+  }
+
+  p {
+    margin: 20px 0;
+    padding: 0 10px;
+    font-size: 18px;
+  }
+
+  ul {
+    margin: 20px 0;
+    padding: 0 40px;
+    list-style-type: square;
+
+    li {
+      margin: 10px 0;
+    }
+  }
+
+  a {
+    &:hover {
+      color: $--color-primary;
+    }
+  }
+}

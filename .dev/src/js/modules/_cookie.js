@@ -2,13 +2,15 @@
   const cookie_consent = getCookie("user_cookie_consent");
   const cookiePopup = document.getElementById('cookie')
   if(cookie_consent != ""){
-    cookiePopup.style.display = "none";
+    cookiePopup.classList.add('hidden');
   }else{
-    cookiePopup.style.display = "flex";
+    cookiePopup.classList.remove('hidden');
   }
 
   const acceptCookieBtn = document.getElementById('accept-cookie')
+  const closeCookieBtn = document.getElementById('close-cookie')
   acceptCookieBtn.addEventListener('click', acceptCookie)
+  closeCookieBtn.addEventListener('click', closePopup)
 
   function setCookie(cname, cvalue, exdays) {
     const d = new Date();
@@ -45,6 +47,10 @@
   function acceptCookie() {
     deleteCookie('user_cookie_consent');
     setCookie('user_cookie_consent', 1, 30);
-    document.getElementById('cookie').style.display = 'none';
+    closePopup()
+  }
+
+  function closePopup() {
+    cookiePopup.classList.add('hidden');
   }
 })();
