@@ -33,8 +33,10 @@
     echo get_img_preload("$site_url/assets/img/logo.svg");
     echo get_img_preload("$site_url/assets/img/icons/burger.svg");
 
-    foreach ($page['preloads']['imgs'] as $preload_img) {
-      echo get_img_preload($preload_img);
+    if (isset($page['preloads']['imgs']) ) {
+      foreach ($page['preloads']['imgs'] as $preload_img) {
+        echo get_img_preload($preload_img);
+      }
     } 
 
     // styles
