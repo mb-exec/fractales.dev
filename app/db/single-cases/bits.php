@@ -39,7 +39,7 @@
         'title' => 'Emphasized the direction of the agency',
         'text' => 'It was necessary to show manufacturability and modernity through the visual. To do this, we used an acid green color  on a dark background as a reference to digitalization. And moving geometric figures show dynamics and are  a reference to mathematics.',
 
-        'img_name' => 'about',
+        'img_name' => 'design',
         'img_alt' => 'Site preview on mobile'
       ],
       [
