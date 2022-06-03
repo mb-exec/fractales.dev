@@ -16,19 +16,19 @@
       width: 130px;
       height: 130px;
       border-radius: 50%;
-      filter: blur(55px);
+      filter: blur(80px);
       opacity: .5;
       z-index: -1;
     }
 
     &::before {
-      background-color: $--color-secondary;
+      background-color: $--color-primary;
       right: 0;
       top: 0;
     }
 
     &::after {
-      background-color: $--color-primary;
+      background-color: $--color-secondary;
       right: 85px;
       top: 40px;
     }
@@ -206,6 +206,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        background: none;
       }
     }
   }
@@ -240,6 +241,7 @@
         width: 50px;
         height: 50px;
         object-fit: contain;
+        background: none;
       }
 
       &__title {
@@ -520,6 +522,12 @@
     }
   }
 
+  .cases {
+    &__show-more {
+     font-size: 18px;
+    }
+  }
+
   .technology {
     &__descr {
       max-width: 390px;
@@ -656,7 +664,7 @@
       &::after {
         width: 350px;
         height: 350px;
-        filter: blur(80px);
+        filter: blur(100px);
       }
 
       &::before {

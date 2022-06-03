@@ -93,6 +93,7 @@ body {
     &-img {
       width: 140px;
       height: 25px;
+      background: transparent;
     }
   }
 
@@ -204,6 +205,10 @@ body {
     height: 25px;
     display: block;
     margin-bottom: 30px;
+
+    &-img {
+      background: transparent;
+    }
   }
 
   &__email {
@@ -401,6 +406,15 @@ body {
         &:hover {
           color: $--color-primary;
         }
+      }
+    }
+
+    &__policy {
+      transition: color $--transition-speed, border $--transition-speed;
+
+      &:hover {
+        color: $--color-primary;
+        border-bottom-color: $--color-primary;
       }
     }
   }

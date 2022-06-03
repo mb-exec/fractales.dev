@@ -74,6 +74,10 @@
   display: none !important;
 }
 
+img {
+  background: url('../img/placeholder.svg') no-repeat center/cover;
+}
+
 @media screen and (min-width: 767.98px) {
   .container {
     max-width: 760px;

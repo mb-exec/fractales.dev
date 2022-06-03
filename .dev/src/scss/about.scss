@@ -19,7 +19,7 @@
   }
 
   &__img {
-    background: url('../img/img-placeholder.svg') center/cover;
+    height: 180px;
   }
 }
 
@@ -83,6 +83,10 @@
     &__descr {
       max-width: 310px;
       margin: 0 0 30px auto;
+    }
+
+    &__img {
+      height: 400px;
     }
   }
 
@@ -155,6 +159,10 @@
       max-width: 350px;
       margin: 10px 38px 40px auto;
     }
+
+    &__img {
+      height: 550px;
+    }
   }
 
   .about-us {
@@ -216,6 +224,10 @@
 
     &__descr {
       margin-top: 20px;
+    }
+
+    &__img {
+      height: 695px;
     }
   }
 

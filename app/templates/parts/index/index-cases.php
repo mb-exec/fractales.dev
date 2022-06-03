@@ -13,6 +13,6 @@
       ?>
     </ul>
 
-    <a href="works" class="cases__show-more">Show more</a>
+    <a href="works" class="cases__show-more">View all</a>
   </div>
 </section>
