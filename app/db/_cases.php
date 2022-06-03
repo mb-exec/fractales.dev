@@ -8,6 +8,7 @@ require 'single-cases/orange.php';
 require 'single-cases/bits.php';
 require 'single-cases/gingerjoys.php';
 require 'single-cases/profitnes.php';
+require 'single-cases/imperator.php';
 
 $cases = [
   'profitnes' => $profitnes,
@@ -16,5 +17,6 @@ $cases = [
   'bits' => $bits,
   'orange' => $orange,
   'gingerjoys' => $gingerjoys,
+  'imperator' => $imperator,
 ]
 ?>

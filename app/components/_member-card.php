@@ -12,6 +12,8 @@
  * ]`
  */
 function get_member_card($member, $class = '', $animation = false, $tag = 'li') {
+  global $webp_support, $site_url;
+
   $photo = $member['photo'];
   $name = $member['name'];
   $position = $member['position'];
@@ -19,15 +21,16 @@ function get_member_card($member, $class = '', $animation = false, $tag = 'li') 
   $animation_attr = $animation === true 
     ? ' data-animation="appear-bottom"'
     : '';
+  
+  $file_ext = $webp_support ? 'webp' : 'jpg';
 
   return <<<EOL
     <$tag class="member$class"$animation_attr>
-      <picture class="member__pic">
-        <source srcset="$photo.webp" type="image/webp">
-        <img loading="lazy" src="$photo.jpg" alt="$name photo" class="member__img">
-      </picture>
+      <div class="member__pic">
+        <img src="$site_url/assets/img/placeholder.svg" data-src="$photo.$file_ext" alt="$name photo" class="member__img lazy">
+      </div>
 
-      <h4 class="member__name">$name</h4>
+      <span class="member__name">$name</span>
       <p class="member__position">$position</p>
     </$tag>
   EOL;

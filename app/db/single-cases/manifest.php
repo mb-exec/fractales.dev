@@ -1,6 +1,6 @@
 <?php
   $manifest = [
-    'title' => 'Digital media magazine for modern women',
+    'title' => 'Digital magazine for modern women',
     'tag' => 'Services',
 
     'card_descr' => 'Together with the customer, we transformed the Instagram account into a large digital resource with well-thought-out section navigation.',
@@ -27,9 +27,6 @@
       'HTML 5',
       'WordPress',
     ],
-
-    // секция about
-    'about' => "Manifest is a digital media magazine about fashion, beauty, personal growth, expertise and philosophy of conscious consumption for modern women.<br><br>The magazine brings together experts from various fields - beauty, psychology, health, ecology and conscious consumption. The idea of ​​the project is to simply and easily tell about everything that is important for a modern woman.",
 
     'sections' => [
       [

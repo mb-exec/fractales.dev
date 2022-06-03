@@ -29,7 +29,7 @@ $team = $db['team'];
   <div class="container">
     <h2 class="sect__title">About us</h2>
 
-    <div class="about__inner">
+    <div class="about__inner" data-animation="appear-bottom">
       <h3 class="about__title about__title--steps">HOW WE WORK</h3>
 
       <div class="about__content">
@@ -37,12 +37,13 @@ $team = $db['team'];
           <div class="swiper-wrapper">
             <?php foreach ( $steps_list as $step ) : 
               $icon = $site_url . '/assets/img/icons/steps-' . $step['icon'] . '.svg';
+              $placeholder = $site_url . '/assets/img/placeholder.svg';
               $title = $step['title'];
               $descr = $step['descr'];
             ?>
 
               <div class="step swiper-slide">
-                <img loading="lazy" src="<?php echo $icon ?>" alt="<?php echo $title ?>" class="step__icon">
+                <img src="<?php echo $placeholder ?>" data-src="<?php echo $icon ?>" alt="<?php echo $title ?>" class="step__icon lazy">
                 <h4 class="step__title"><?php echo $title ?></h4>
                 <p class="step__descr"><?php echo $descr ?></p>
               </div>
@@ -54,7 +55,7 @@ $team = $db['team'];
       </div>
     </div>
 
-    <div class="about__inner">
+    <div class="about__inner" data-animation="appear-bottom">
       <h3 class="about__title about__title--team">MEET THE TEAM</h3>
 
       <div class="about__content">

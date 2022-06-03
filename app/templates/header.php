@@ -44,8 +44,9 @@
 
     foreach ( $page['styles'] as $style_name ) {
       echo get_style_link(['name' => $style_name, 'preload' => true]);
-    }
+    }    
   ?>    
+  <link rel="preconnect" href="https://polyfill.io">
   <!-- PRELOAD -->
 
   <!-- STYLES & SCRIPTS -->  
@@ -110,7 +111,7 @@
     <div class="container">
       <div class="hdr__inner">
         <a href="<?php echo $site_url ?>" class="hdr__logo">
-          <img loading="lazy" src="<?php echo $site_url ?>/assets/img/logo.svg" alt="Лого" class="hdr__logo-img">
+          <img src="<?php echo $site_url ?>/assets/img/logo.svg" alt="Лого" width="200" height="35" class="hdr__logo-img" decoding="async">
         </a>
 
         <button class="burger" title="toggle menu"></button>

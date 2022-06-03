@@ -40,6 +40,13 @@
       ]
     ],
 
+    'policy' => [
+      'title' => 'Policy',
+      'styles' => [
+        'policy'
+      ]
+    ],
+
     'about' => [
       'title' => 'Our team of specialists | fractales dev',
       'description' => 'We believe that the team is the most valuable asset in any business. Each of us is a professional in his field. This helps to separate tasks and work efficiently.',
@@ -58,13 +65,17 @@
       'preloads' => [
         'imgs' => [
           [
+            'href' => "$site_url/assets/img/placeholder.svg"
+          ],
+          [
             'href' => "$site_url/assets/img/about-page/hero-lg.$webp_or_jpeg",
             'media_query' => '(min-width: 767.98px)',
           ],
           [
             'href' => "$site_url/assets/img/about-page/hero-xs.$webp_or_jpeg",
             'media_query' => '(max-width: 767.98px)',
-          ]
+          ],
+
         ]
       ]
     ],
@@ -173,31 +184,85 @@
         'img_type' => 'image/jpeg',
       ],
     ],
+
+    'imperator' => [
+      'title' => 'Antique salon IMPERATOR GALLERY | fractales dev',
+      'description' => "We developed an eCommerce landing page that conveys the atmosphere of the gallery and the exclusivity of the items.",
+      'scripts' => [],
+      'styles' => [
+        'case',
+      ],
+      'og' => [
+        'type' => 'article',
+        'url' => "$site_url/cases/imperator",
+        'img' => "$site_url/assets/img/cases/imperator/preview.jpg",
+        'img_type' => 'image/jpeg',
+      ],
+    ],
   ];
 
   /**
    * Названия для главных картинок у каждого кейса 'hdr', 
    * добавляем прелоад для всех кейсов, чтобы не писать отдельно у каждого
    */
+  // foreach (
+  //   ['fuenf', 'manifest', 'gingerjoys', 'orange', 'bits', 'profitnes', 'imperator-gallery'] as $case_name) {
+  //   $pages[$case_name]['preloads']['imgs'] = [
+  //     [
+  //       'href' => "$site_url/assets/img/placeholder.svg"
+  //     ],
+  //     [
+  //       'href' => "$site_url/assets/img/cases/$case_name/hdr-xs.$webp_or_jpeg",
+  //       'media_query' => '(max-width: 767.98px)',
+  //     ],
+  //     [
+  //       'href' => "$site_url/assets/img/cases/$case_name/hdr-sm.$webp_or_jpeg",
+  //       'media_query' => '(min-width: 767.98px) and (max-width: 1023.98px)',
+  //     ],
+  //     [
+  //       'href' => "$site_url/assets/img/cases/$case_name/hdr-md.$webp_or_jpeg",
+  //       'media_query' => '(min-width: 1023.98px) and (max-width: 1279.98px)',
+  //     ],
+  //     [
+  //       'href' => "$site_url/assets/img/cases/$case_name/hdr-lg.$webp_or_jpeg",
+  //       'media_query' => '(min-width: 1279.98px)',
+  //     ],
+  //   ];
+  // }
+
   foreach (
-    ['fuenf', 'manifest', 'gingerjoys', 'orange', 'bits', 'profitnes'] as $case_name) {
-    $pages[$case_name]['preloads']['imgs'] = [
-      [
-        'href' => "$site_url/assets/img/cases/$case_name/hdr-xs.$webp_or_jpeg",
-        'media_query' => '(max-width: 767.98px)',
-      ],
-      [
-        'href' => "$site_url/assets/img/cases/$case_name/hdr-sm.$webp_or_jpeg",
-        'media_query' => '(min-width: 767.98px) and (max-width: 1023.98px)',
-      ],
-      [
-        'href' => "$site_url/assets/img/cases/$case_name/hdr-md.$webp_or_jpeg",
-        'media_query' => '(min-width: 1023.98px) and (max-width: 1279.98px)',
-      ],
-      [
-        'href' => "$site_url/assets/img/cases/$case_name/hdr-lg.$webp_or_jpeg",
-        'media_query' => '(min-width: 1279.98px)',
-      ],
-    ];
+    ['fuenf', 'manifest', 'gingerjoys', 'orange', 'bits', 'profitnes', 'imperator-gallery'] as $case_name) {
+      global $webp_support;
+
+      $imgs_path = $site_url."/assets/img/cases/$case_name/hdr";
+      $file_ext = $webp_support ? 'webp' : 'jpg';
+
+      $xs_width = getimagesize("$imgs_path-xs.jpg")[0];
+      $sm_width = getimagesize("$imgs_path-sm.jpg")[0];
+      $md_width = getimagesize("$imgs_path-md.jpg")[0];
+      $lg_width = getimagesize("$imgs_path-lg.jpg")[0];
+
+      $sizes = "(max-width: 767.98px) 100px,
+          (min-width: 767.98px) 720px,
+          (min-width: 1023.98px) 960px,
+          (min-width: 1279.98px) 1200px,
+          100w";
+      $sizes = str_replace(["\r", "    ", "\n"], '', $sizes);
+
+      $src_set = "$imgs_path-xs.$file_ext {$xs_width}w,
+        $imgs_path-sm.$file_ext {$sm_width}w,
+        $imgs_path-md.$file_ext {$md_width}w,
+        $imgs_path-lg.$file_ext {$lg_width}w";
+      $src_set = str_replace(["\r", "    ", "\n"], '', $src_set);
+
+      // $pages[$case_name]['preloads']['imgs'] = [
+      //   [
+      //     'href' => "$site_url/assets/img/placeholder.svg"
+      //   ],
+      //   [
+      //     'imagesrcset' => $src_set,
+      //     'imagesizes' => $sizes,
+      //   ]
+      // ];
   }
 ?>

@@ -34,16 +34,14 @@ try {
   $mail->isSMTP();
   $mail->CharSet  = "UTF-8";
   $mail->SMTPAuth = true;
-  $mail->Debugoutput = function($str, $level) {
-    $GLOBALS['status'][] = $str;
-  };
+  $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
-  $mail->Host       = 'smtp.beget.com'; 
-  $mail->Username   = 'test@boak.ru';
-  $mail->Password   = 'NjpK7s2S';
+  $mail->Host       = 'smtp.yandex.ru'; 
+  $mail->Username   = 'mail@fractales.dev';
+  $mail->Password   = 'IP20Mu8Nn8fL5mNQ5CD6RuG4';
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
-  $mail->setFrom('test@boak.ru', 'test@boak.ru');
+  $mail->setFrom('mail@fractales.dev', 'fractales dev');
 
   $mail->addAddress('vadim@media-bay.ru');  
   $mail->addAddress('hello@fractales.dev');  

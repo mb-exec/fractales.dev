@@ -41,7 +41,7 @@
   </footer>
 
   <?php
-    // require __ROOT__ . '/app/templates/parts/cookie-popup.php';
+    require __ROOT__ . '/app/templates/parts/cookie-popup.php';
   ?>
 </body>
 </html>

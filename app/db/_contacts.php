@@ -2,7 +2,7 @@
   $contacts = [    
     'email' => 'hello@fractales.dev',
 
-    'tel' => '+1 345 768 312',
+    'tel' => '+44 7943 405419',
 
     'socials' => [
       'Instagram' => '#',

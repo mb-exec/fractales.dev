@@ -27,7 +27,7 @@
   <div class="container">
     <h2 class="sect__title">Technology stack</h2>
 
-    <div class="technology__inner">
+    <div class="technology__inner" data-animation="appear-bottom">
       <div class="technology__descr">
         <p>
         We select technologies based on the tasks of the project. This allows us to take into account compatibility requirements and reduce development time.
