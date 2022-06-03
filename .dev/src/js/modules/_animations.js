@@ -6,7 +6,7 @@
         observer.unobserve(entry.target)
       }
     })
-  })
+  }, {threshold: .25})
   
   setAnimationAttrForAllSectionTitles()
 
