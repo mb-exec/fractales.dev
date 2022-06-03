@@ -14,7 +14,8 @@ try {
 } catch (e) {}
 
 //=require /modules/_header.js
+//=require /modules/_cookie.js
+//=require /modules/_lazyload.js
 //=require /modules/_animations.js
-
 
 //=require /modules/_contacts-form.js
