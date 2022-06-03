@@ -1,8 +1,8 @@
 <?php
   $bits = [
-    'title' => 'BITS DIGITAL DESIGN<br>digital markeitng agency',
-    'tag' => 'Corporate  website',
-    'card_descr' => 'We create a website for digital markeitng agency with focus on international markets und business development in IT and Digital.',
+    'title' => 'BITS DIGITAL DESIGN<br>digital marketing agency',
+    'tag' => 'Corporate website',
+    'card_descr' => 'We create a website for digital marketing agency with focus on international markets und business development in IT and Digital.',
     'imgs_folder' => $site_url . '/assets/img/cases/bits/',
     'card_img_alt' => '',
     'page_link' => $site_url . '/cases/bits',
@@ -29,7 +29,7 @@
       [
         'name' => 'ABOUT PROJECT',
         'title' => '',
-        'text' => 'The main task  of the project is to create a website for digital markeitng agency with focus on international markets und business development in IT and Digital.',
+        'text' => 'The main task  of the project is to create a website for digital marketing agency with focus on international markets und business development in IT and Digital.',
 
         'img_name' => 'about',
         'img_alt' => 'Site preview on mobile'

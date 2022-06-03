@@ -1,8 +1,10 @@
 <?php
   $fuenf = [
-    'title' => 'FUENF X THE BRVTALIST collaboration catalog',
+    // 'title' => 'FUENF X THE BRVTALIST collaboration catalog',
+    'title' => 'Fashion collection e-catalog',
     'tag' => 'Online shopping',
-    'card_descr' => 'With the help of a landing page, a new FUENF collection was presented. We focused on products and conveyed the atmosphere of the brand.',
+    // 'card_descr' => 'With the help of a landing page, a new FUENF collection was presented. We focused on products and conveyed the atmosphere of the brand.',
+    'card_descr' => 'Designed a web-presentation of a new collection for a modern street fashion brand. We focused on products and conveyed the atmosphere of the brand.',
     'imgs_folder' => $site_url . '/assets/img/cases/fuenf/',
     'card_img_alt' => 'Fuenf case preview',
     'page_link' => $site_url . '/cases/fuenf',
