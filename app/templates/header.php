@@ -44,8 +44,9 @@
 
     foreach ( $page['styles'] as $style_name ) {
       echo get_style_link(['name' => $style_name, 'preload' => true]);
-    }
+    }    
   ?>    
+  <link rel="preconnect" href="https://polyfill.io">
   <!-- PRELOAD -->
 
   <!-- STYLES & SCRIPTS -->  
