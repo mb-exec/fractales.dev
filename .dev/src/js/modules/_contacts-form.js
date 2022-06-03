@@ -2,6 +2,11 @@
   const FORM_URL = window.location.origin + '/send.php';
 
   const form = document.getElementById('contact-form')
+
+  if (!form) {
+    return
+  }
+
   const fileInput = document.querySelector('.file__input')
   const attachmentsPreview = document.querySelector('.attachments__preview')
   const filePreviewName = document.querySelector('.attachments__name')

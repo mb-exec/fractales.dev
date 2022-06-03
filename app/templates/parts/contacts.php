@@ -1,4 +1,4 @@
-<section id="contacts" class="contacts sect">
+<section id="contacts" class="contacts sect" data-animation="appear-bottom">
   <div class="container">
     <h2 class="sect__title">Contacts</h2>
 
@@ -57,7 +57,7 @@
             </div>
 
             <div class="contact-form__bottom">
-              <p class="contact-form__warning">By clicking the "send" button you consent to the processing of personal data</p>
+              <p class="contact-form__warning">By clicking the "send" button you consent to the processing of <a class="contact-form__warning-link" href="<?php echo $site_url ?>/policy/#information">personal data</a></p>
 
               <button class="contact-form__send btn text-ls frame-hover">
                 Send 
