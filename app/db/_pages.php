@@ -231,7 +231,7 @@
   // }
 
   foreach (
-    ['fuenf', 'manifest', 'gingerjoys', 'orange', 'bits', 'profitnes', 'imperator-gallery'] as $case_name) {
+    ['fuenf', 'manifest', 'gingerjoys', 'orange', 'bits', 'profitnes', 'imperator'] as $case_name) {
       global $webp_support;
 
       $imgs_path = $site_url."/assets/img/cases/$case_name/hdr";

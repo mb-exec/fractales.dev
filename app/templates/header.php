@@ -92,6 +92,8 @@
     <meta property="og:image" content="<?php echo $page['og']['img'] ?>"/>
     <meta property="og:image:type" content="<?php echo $page['og']['img_type'] ?>" />
     <meta property="og:url" content= "<?php echo $page['og']['url'] ?>"/>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:site_name" content="Fractales dev" />
   <?php endif ?>
 </head>
 
