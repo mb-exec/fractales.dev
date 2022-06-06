@@ -33,8 +33,10 @@
     echo get_img_preload("$site_url/assets/img/logo.svg");
     echo get_img_preload("$site_url/assets/img/icons/burger.svg");
 
-    foreach ($page['preloads']['imgs'] as $preload_img) {
-      echo get_img_preload($preload_img);
+    if (isset($page['preloads']['imgs']) ) {
+      foreach ($page['preloads']['imgs'] as $preload_img) {
+        echo get_img_preload($preload_img);
+      }
     } 
 
     // styles
@@ -90,6 +92,8 @@
     <meta property="og:image" content="<?php echo $page['og']['img'] ?>"/>
     <meta property="og:image:type" content="<?php echo $page['og']['img_type'] ?>" />
     <meta property="og:url" content= "<?php echo $page['og']['url'] ?>"/>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:site_name" content="Fractales dev" />
   <?php endif ?>
 </head>
 
