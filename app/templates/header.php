@@ -17,11 +17,11 @@
   <!-- PRELOAD -->
   <?php
     $fonts = [
-      'Heebo-Regular',
+      // 'Heebo-Regular',
       'Panchang-Medium',
       'Panchang-Semibold',
       'Poppins-Regular',
-      'Poppins-Medium',
+      // 'Poppins-Medium',
     ];
 
     foreach ( $fonts as $font ) : ?>
