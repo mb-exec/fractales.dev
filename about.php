@@ -1,19 +1,25 @@
-<?php require 'app/templates/header.php' ?>
+<?php 
+  require 'app/templates/header.php';
+  $img_ext = $webp_support ? 'webp' : 'jpg';
+  $img_path_xs = $site_url.'/assets/img/about-page/hero-xs.'.$img_ext;
+  $img_path_lg = $site_url.'/assets/img/about-page/hero-lg.'.$img_ext;
+  $img_xs_width = getimagesize($img_path_xs)[0];
+  $img_lg_width = getimagesize($img_path_lg)[0];
+  $src_set = "$img_path_xs {$img_xs_width}w, $img_path_lg {$img_lg_width}w";
+?>
 
 <section class="about-hero">
   <div class="container">
     <h1 class="title-lg">fractales dev</h1>
     <p class="about-hero__descr text-ls">Focusing on individual details, we create a high-quality holistic product</p>
-    <picture class="about-hero__pic">
-
-      <?php if ($webp_support) : ?>
-        <source media="(min-width: 767.98px)" srcset="<?php echo $site_url ?>/assets/img/about-page/hero-lg.webp" type="image/webp">
-        <img loading="lazy" src="<?php echo $site_url ?>/assets/img/about-page/hero-xs.webp" alt="#" class="about-hero__img">
-      <?php else : ?>
-        <source media="(min-width: 767.98px)" srcset="<?php echo $site_url ?>/assets/img/about-page/hero-lg.jpg" type="image/jpeg">
-        <img loading="lazy" src="<?php echo $site_url ?>/assets/img/about-page/hero-xs.jpg" alt="#" class="about-hero__img">      
-      <?php endif ?>
-    </picture>
+    <div class="about-hero__pic">
+      <img 
+        src="<?php echo $site_url ?>/assets/img/about-page/hero-xs.webp" 
+        srcset="<?php echo $src_set ?>"        
+        alt="#"
+        decoding="async"
+      >
+    </div>
   </div>
 </section>
 

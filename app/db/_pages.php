@@ -67,15 +67,6 @@
           [
             'href' => "$site_url/assets/img/placeholder.svg"
           ],
-          [
-            'href' => "$site_url/assets/img/about-page/hero-lg.$webp_or_jpeg",
-            'media_query' => '(min-width: 767.98px)',
-          ],
-          [
-            'href' => "$site_url/assets/img/about-page/hero-xs.$webp_or_jpeg",
-            'media_query' => '(max-width: 767.98px)',
-          ],
-
         ]
       ]
     ],
@@ -201,35 +192,6 @@
     ],
   ];
 
-  /**
-   * Названия для главных картинок у каждого кейса 'hdr', 
-   * добавляем прелоад для всех кейсов, чтобы не писать отдельно у каждого
-   */
-  // foreach (
-  //   ['fuenf', 'manifest', 'gingerjoys', 'orange', 'bits', 'profitnes', 'imperator-gallery'] as $case_name) {
-  //   $pages[$case_name]['preloads']['imgs'] = [
-  //     [
-  //       'href' => "$site_url/assets/img/placeholder.svg"
-  //     ],
-  //     [
-  //       'href' => "$site_url/assets/img/cases/$case_name/hdr-xs.$webp_or_jpeg",
-  //       'media_query' => '(max-width: 767.98px)',
-  //     ],
-  //     [
-  //       'href' => "$site_url/assets/img/cases/$case_name/hdr-sm.$webp_or_jpeg",
-  //       'media_query' => '(min-width: 767.98px) and (max-width: 1023.98px)',
-  //     ],
-  //     [
-  //       'href' => "$site_url/assets/img/cases/$case_name/hdr-md.$webp_or_jpeg",
-  //       'media_query' => '(min-width: 1023.98px) and (max-width: 1279.98px)',
-  //     ],
-  //     [
-  //       'href' => "$site_url/assets/img/cases/$case_name/hdr-lg.$webp_or_jpeg",
-  //       'media_query' => '(min-width: 1279.98px)',
-  //     ],
-  //   ];
-  // }
-
   foreach (
     ['fuenf', 'manifest', 'gingerjoys', 'orange', 'bits', 'profitnes', 'imperator'] as $case_name) {
       global $webp_support;
@@ -255,14 +217,22 @@
         $imgs_path-lg.$file_ext {$lg_width}w";
       $src_set = str_replace(["\r", "    ", "\n"], '', $src_set);
 
-      // $pages[$case_name]['preloads']['imgs'] = [
-      //   [
-      //     'href' => "$site_url/assets/img/placeholder.svg"
-      //   ],
-      //   [
-      //     'imagesrcset' => $src_set,
-      //     'imagesizes' => $sizes,
-      //   ]
-      // ];
+      $pages[$case_name]['preloads']['imgs'] = [
+        [
+          'href' => "$site_url/assets/img/placeholder.svg"
+        ],
+        [
+          'imagesrcset' => $src_set,
+          'imagesizes' => $sizes,
+        ]
+      ];
   }
-?>
+
+  // add about page preload
+  $img_ext = $webp_support ? 'webp' : 'jpg';
+  $img_path_xs = $site_url.'/assets/img/about-page/hero-xs.'.$img_ext;
+  $img_path_lg = $site_url.'/assets/img/about-page/hero-lg.'.$img_ext;
+  $img_xs_width = getimagesize($img_path_xs)[0];
+  $img_lg_width = getimagesize($img_path_lg)[0];
+  $src_set = "$img_path_xs {$img_xs_width}w, $img_path_lg {$img_lg_width}w";
+  $pages['about']['preloads']['imgs'][] = ['imagesrcset' => $src_set];
