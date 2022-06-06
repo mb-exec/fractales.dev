@@ -35,6 +35,6 @@
       $sizes_attr = ' imagesizes="' . $_args['imagesizes'] . '"';
     }
 
-    return '<link rel="preload" as="image"' . $href . $_args['href'] . '"' . $media_attr . $srcset_attr . $sizes_attr . '/>';
+    return '<link rel="preload" as="image"' . $href . '"' . $media_attr . $srcset_attr . $sizes_attr . '/>';
   }
 ?>
