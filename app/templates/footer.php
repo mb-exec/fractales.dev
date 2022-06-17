@@ -34,7 +34,7 @@
 
         <div class="ftr__bottom">
           <a href="<?php echo $site_url ?>/policy" class="ftr__policy">privacy policy</a>
-          <p class="ftr__rights">© fractales development, <?php echo getdate()['year'] ?> All rights reserved</p>
+          <p class="ftr__rights">© fractales development, <?php echo getdate()['year'] ?></p>
         </div>
       </div>
     </div>
