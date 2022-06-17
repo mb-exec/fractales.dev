@@ -46,7 +46,7 @@
   // Set cookie consent
   function acceptCookie() {
     deleteCookie('user_cookie_consent');
-    setCookie('user_cookie_consent', 1, 30);
+    setCookie('user_cookie_consent', 1, 90);
     closePopup()
   }
 

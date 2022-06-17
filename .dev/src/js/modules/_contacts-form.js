@@ -42,7 +42,6 @@
     })
     .then(res => res.json())
     .then(data => {
-      console.log(data);
       if (responseHandlers[data.status]) {
         responseHandlers[data.status]()
       }
