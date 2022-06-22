@@ -15,19 +15,16 @@ git remote add origin git@github.com:mb-exec/fractales.dev.git
 // const SERVER_BASE_URL = 'http://'
 const SERVER_BASE_URL = 'http://localhost:8888'
 ```
-Так же при изменении гитхаба заменить.
-Необходимо для `npm run deploy`
+Так же при изменении гитхаба заменить ( необходимо для `npm run deploy` ):
+
 
 ```js
-const GITHUB_URL
-const GITHUB_SSH
+const GITHUB_URL = 'https://github.com/mb-exec/fractales.dev.git'
+const GITHUB_SSH = 'git@github.com:mb-exec/fractales.dev.git'
 ```
 Перейти в папку `.dev`
 ```
 cd .dev/
-```
-И выполнить
-```
 npm i
 ```
 ### Доступные команды
@@ -44,24 +41,35 @@ npm run build
 ```
 npm run deploy
 ```
+
 ## Структура
-Основной файл с информацией по всему проекту `functions.php`
+- Основной файл с информацией по всему проекту `functions.php`
 
-В нем подключаются все индексные файли из папок 
-```
-./app/inc 
-./app/db 
-./app/components
-```
-Отдельная информация по страницам настраивается в файле `./app/db/_pages.php`
-```
-[
-  'global' => ... // основные скрипты и стили для всех страниц
+- В нем подключаются все индексные файли из папок 
+  ```
+  ./app/inc 
+  ./app/db 
+  ./app/components
+  ```
+- Отдельная информация по страницам настраивается в файле `./app/db/_pages.php`. Вся информация для шаблона будет доступна в переменной `$page`
+  ```php
+  [
+    'global' => ... // основные скрипты и стили для всех страниц
 
-  'about' => ... // информация для шаблона about.php
-  'fuenf' => ... // информация для шаблона fuenf.php
-]
-```
+    'about' => ... // информация для шаблона about.php
+    'fuenf' => [ // информация для шаблона fuenf.php
+      'title' => ... // для тэга title в head
+      'description' => ...
+      'scripts' => [ // список имен файлов, которые будут подключены в шаблоне
+        'main' // подключает /assets/js/main.js 
+      ]
+      'styles' => [
+        ...
+      ]
+    ]
+  ]
+  ```
+
 ## Создание нового кейса
 - в папке `./cases/%name%.php` создать шаблон страницы 
 - в `./app/db/_pages.php` добавить поле с названием шаблона
@@ -87,6 +95,9 @@ npm run deploy
   ``` 
 - (если кейс стандартный) создать информацию для шаблона в `./app/db/single-cases/` и заполнить по шаблону из этой папки `__template__.php`
 - добавить кейс в файле `./app/db/_cases/`
+  ```
+    require 'single-cases/%name%.php';
+  ```
 - в `./cases/%name%.php` заполнить 
   ```php
   require '../app/templates/header.php';
